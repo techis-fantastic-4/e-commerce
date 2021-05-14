@@ -37,7 +37,7 @@ There are three branches :<br>
 |---- development -- `Auto Deploy to Staging`<br>
 |<br>
 |<br>
-|---- deature branches(Design,Database,User Test etc.) <br>
+|---- feature branches(Design,Database,User Test etc.) <br>
 
 #### Flow to develop
 

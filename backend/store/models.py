@@ -1,4 +1,5 @@
 from django.db import models
+# from backend.consts import *
 from backend.consts import *
 from cloudinary.models import CloudinaryField
 

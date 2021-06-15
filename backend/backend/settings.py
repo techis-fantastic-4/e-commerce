@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 import django_heroku
 import cloudinary
@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
+    'user',
     'cloudinary',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -93,7 +95,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -149,3 +151,4 @@ cloudinary.config(
     api_key="428418617293135",
     api_secret="7tc-YXosM9gRGRNzNPjFRr2cLC8"
 )
+

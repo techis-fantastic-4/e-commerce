@@ -1,6 +1,10 @@
-# e-commerce
+# TECHShop
 
 This is a project for e-commerce.
+
+[Open App](https://fantastic4-commerce.herokuapp.com/)
+
+[Open API](https://fantastic4-commerce-api.herokuapp.com/)
 
 ## Tech used
 
@@ -8,6 +12,13 @@ This is a project for e-commerce.
 - Frontend: `React`, `Redux`
 - Database: `sqlite3`
 - Web Server & Deploy: `Heroku`
+
+## Contributors
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
 
 ## Folders for main Apps
 

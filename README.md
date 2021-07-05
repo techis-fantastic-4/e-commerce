@@ -15,10 +15,11 @@ This is a project for e-commerce.
 
 ## Contributors
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| Abdelhak Saadi | Casey Bloom |
+| :---: | :---: |
+| <img width="100" src="https://media-exp3.licdn.com/dms/image/C5603AQErvKa6rMQHPw/profile-displayphoto-shrink_400_400/0/1605134351725?e=1631145600&v=beta&t=YdxACHWgYchaE5AJ8sj2XLiaHyFl8Ld94D6B_fPH6G0" /> | <img width="100" src="https://media-exp3.licdn.com/dms/image/C5635AQEIYLDh7kJt-Q/profile-framedphoto-shrink_400_400/0/1617126662935?e=1625587200&v=beta&t=PMvj07yYyyF9DrO59ALUgu2P85ZBU6qbGQ_62TfdtKY" /> |
+| <a href="https://www.linkedin.com/in/abdelhak-saadi-06a21b1bb/"><img width="30" src="https://user-images.githubusercontent.com/86960639/124492375-fbf56980-ddd1-11eb-8b61-860e664272b3.png" /></a> | <a href="https://www.linkedin.com/in/casey-d-bloom/"><img width="30" src="https://user-images.githubusercontent.com/86960639/124492375-fbf56980-ddd1-11eb-8b61-860e664272b3.png" /></a> |
+| <a href="https://github.com/saadiabdelhak1"><img width="30" src="https://user-images.githubusercontent.com/86960639/124493149-edf41880-ddd2-11eb-9fa2-ae29da0f556d.png" /></a> | <a href="https://github.com/TerrapinStat10n/"><img width="30" src="https://user-images.githubusercontent.com/86960639/124493149-edf41880-ddd2-11eb-9fa2-ae29da0f556d.png" /></a> |
 
 ## Folders for main Apps
 

@@ -2,9 +2,12 @@
 
 This is a project for e-commerce.
 
+`We use Heroku's free plan. The page will take a few moments to load.`
+
 [Open App](https://fantastic4-commerce.herokuapp.com/)
 
 [Open API](https://fantastic4-commerce-api.herokuapp.com/)
+
 
 ## Tech used
 

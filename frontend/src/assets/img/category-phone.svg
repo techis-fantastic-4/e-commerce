@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="123" height="230" viewBox="0 0 123 230">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 100 100">
+      <image width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAADLElEQVR4nO2dMWsUQRiGHwPXSNTC0sQfIDktVLCxFMQisUhlY+HPsLCRpBJM/oCgQa0EQZJOW0EFQUG4ShPU2iRoRDgtdovN3Gazm+zcvCvvA19xex873zfPzs5dNWCMMcZo0wPmgRXgE7AN/BWPrbzWlbz2Xuuzkog5YED6CT5sDPJeOssEsEj6iWwzhsBC3lvn+N9kFGOhxXkaC3NkT1OxiV/AMnAFeEiaiawbv4E7wGVgKa89XCmzrc1WZHqM7hnrQD/Iu8v4JrhJDIFrQa19YCPIG9CRjX6e0ZUxU5LXA75Sf6JeAKcqxp0CVkvyw+v7xbM97t8HdoLc+Yp6ZFhhd9H3KnIfUH+ipmqMPb1HfvH6fnGr4v73g9xHNWpqRIxfCxeCz08qcj9EGP+wfKz4LuzlYsxC2mKT3U/R0Yrcq9R/clepXiXTwFpJfnh9v/3jWMUYk0H+ZkWuDGGTVZwuyU8Zn1vurzGp/+CsA98S11DkdeoCUgsBeJq6gAKPUxcQg6ZL+iTNfv7GijXgSIT+knOQgmfI3t+pZLwEjkfsLykHLfgEcBt4D/wsuU/b8QN4Bdyk2as7qpA6S7QpYZExxkhJ1P4UNnVTwELEsBAxLEQMCxHDQsSwEDEsRAwLEcNCxLAQMSxEDAsRw0LEsBAxLEQMCxHDQsSwEDEsRAwLEcNCxLAQMSxEDAsRw0LEsBAxLEQMCxHDQsSwEDEsRAwLEcNCxLAQMSxEDAsRw0LEsBAxLEQMCxHDQsSwEDEsRAwLEcNCxLAQMSxEDAsRw0LEsBAxLEQMCxHDQsSwEDEsRAwLEcNCxLAQMSxEDAsRw0LEsBAxLEQMCxEjhpCt4PNkhDFSEZ5T1frBkjGEhOcSnokwRirCXr63PUAMIW+DzzcijJGKsJc3SapoSNnx3eFZ6l3kHB09vrvsgPsvdFvKWbJjYos9deaAe4A5spOXiw3sAEvAJbqx0U+S1brM6MoYArPpSjsYi6Q/TjVWLLQ4T2NjgqzwcKV0OYZ5T53+/zbL6J7SxRgwhtfUuI5F7ZHtK9eB88AU+vvINrABvAOe5/EnaUXGGGNMBf8AfuUKMPZQAKYAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-273 -1524)">
+    <text id="Phone" transform="translate(273 1739)" fill="#2f2e2e" font-size="40" font-family="Avenir-Roman, Avenir" letter-spacing="0.05em"><tspan x="0" y="0">Phone</tspan></text>
+    <rect id="icons8-iphone-x-100" width="110" height="109" transform="translate(279 1524)" fill="url(#pattern)"/>
+  </g>
+</svg>

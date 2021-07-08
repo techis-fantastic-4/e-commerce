@@ -15,6 +15,57 @@ const api = axios.create({
 });
 
 export default class API {
+    /////////////////////////
+    // Users
+    /////////////////////////
+    signUp = async (user_name, email, password) => {
+        const formData = new FormData();
+        formData.append("user_name", user_name);
+        formData.append("email", email);
+        formData.append("password", password);
+        const savedPost = await api
+            .post("/users/signup/", formData)
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return savedPost
+    }
+    signIn = async (email, password) => {
+        const formData = new FormData();
+        formData.append("email", email);
+        formData.append("password", password);
+        const savedPost = await api
+            .post("/users/signin/", formData)
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return savedPost
+    }
+    getUsers = async (token) => {
+        const posts = await api
+            .get("/users/", {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return posts
+    }
+    /////////////////////////
+    // Posts
+    /////////////////////////
     getPosts = async () => {
         const posts = await api
             .get("/posts/")

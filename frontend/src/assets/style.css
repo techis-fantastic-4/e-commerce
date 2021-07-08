@@ -5,96 +5,363 @@ Common
 html,
 body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Avenir", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .content {
-  width: 600px;
+  width: 900px;
   height: 100%;
   margin: 0 auto;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
 }
 
-@media screen and (max-width: 500px) {
+.btn-primary {
+  background-color: #3290ed;
+  border: 0;
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 10px 25px;
+}
+
+h2 {
+  font-size: 40px;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    padding: 15px 0;
+  }
 }
 
 /*
-Posts
+Header
 ************************************/
 
-.post_form {
-  padding: 20px 40px;
-  border-bottom: 1px solid #ccc;
+header nav {
+  padding: 0 30px;
+  background-color: #3b3838;
 }
 
-.post_form input {
-  width: 70%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+header nav .logo {
+  width: 120px;
+  padding-right: 50px;
 }
 
-.post_form textarea {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.posts ul {
-  padding: 0;
-}
-
-.posts li {
-  position: relative;
-  display: flex;
-  border-bottom: 1px solid #ccc;
-  padding: 20px 40px;
-  list-style: none;
-}
-
-.posts li .menu_icon {
-  width: 20px;
-  position: absolute;
-  right: 30px;
-  top: 18px;
-}
-
-.posts li .menu {
-  position: absolute;
-  top: 40px;
-  right: 15px;
-  border: 1px solid #ccc;
-  background-color: white;
-  padding: 10px 15px;
-  font-size: 13px;
-  border-radius: 3px;
-}
-
-.posts li img {
-  width: 100%;
-}
-
-.posts li .menu a {
+header nav a {
+  color: white;
   text-decoration: none;
 }
 
-.posts li .logo {
-  flex-basis: 15%;
+header nav li {
+  padding-right: 30px;
 }
 
-.posts li .logo img {
-  width: 60%;
+header nav .navbar-brand {
+  margin-right: 0rem;
 }
 
-.posts li .name_body {
-  flex-basis: 85%;
+header nav .icon-search,
+header nav .icon-cart {
+  padding-left: 20px;
+  width: 44px;
 }
 
-.posts li .name_body .name {
+@media screen and (max-width: 1000px) {
+  header nav .icon-search,
+  header nav .icon-cart {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header nav .logo {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  header nav .icon-search,
+  header nav .icon-cart {
+    display: none;
+  }
+  header nav {
+    padding: 0 15px;
+  }
+  header nav li {
+    padding-bottom: 10px;
+  }
+}
+
+/*
+Home
+************************************/
+
+.home .main {
+  position: relative;
+}
+
+.home .main img {
+  width: 100%;
+}
+
+.home .main .main-pc-img {
+  display: block;
+}
+
+.home .main .main-sp-img {
+  display: none;
+}
+
+.home .text-area {
+  position: absolute;
+  color: white;
+  top: 130px;
+  left: 50px;
+  width: 40%;
+}
+
+.home .text-area .title {
+  font-size: 80px;
   font-weight: bold;
 }
 
-.posts li .name_body .datetime {
-  color: gray;
+.home .text-area .product-name {
+  font-size: 56px;
+}
+
+.home .text-area .product-price {
+  font-size: 50px;
+}
+
+.home .text-area .cta-area {
+  display: flex;
+  padding-top: 20px;
+}
+
+.home .text-area .cta-area a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.home .text-area .cta-area .learn-more {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.home .category {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.home .category ul {
+  padding: 20px 0;
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.home .category li {
+  list-style: none;
+  border-right: 1px solid #ccc;
+  padding: 0 20px;
+}
+
+.home .category li:last-child {
+  border-right: 0;
+}
+
+.home .category li img {
+  width: 95%;
+}
+
+.home .product {
+  width: 90%;
+  margin: 70px auto;
+  display: flex;
+}
+
+.home .product .text-area {
+  position: relative;
+  color: black;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+
+.home .product .text-area .learn-more {
+  color: rgb(16, 155, 248);
+}
+
+.home .product img {
+  width: 50%;
+}
+
+.home .product img.pc {
+  display: block;
+}
+
+.home .product img.sp {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .home .text-area .title {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .home .text-area .product-name {
+    font-size: 45px;
+  }
+
+  .home .text-area .product-price {
+    font-size: 30px;
+  }
+
+  .home .text-area .cta-area a {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home .main .main-pc-img {
+    display: none;
+  }
+
+  .home .main .main-sp-img {
+    display: block;
+  }
+  .home .text-area {
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .home .text-area .title {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .home .text-area .product-name {
+    font-size: 35px;
+  }
+
+  .home .text-area .product-price {
+    font-size: 30px;
+  }
+
+  .home .text-area .cta-area a {
+    font-size: 15px;
+  }
+
+  .home .text-area .cta-area {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home .category li {
+    padding: 0 5px;
+  }
+
+  .home .category ul {
+    padding: 0 0 20px 0;
+  }
+
+  .home .product {
+    display: block;
+  }
+
+  .home .product .text-area {
+    width: 100%;
+  }
+
+  .home .product img {
+    width: 100%;
+  }
+
+  .home .product img.pc {
+    display: none;
+  }
+
+  .home .product img.sp {
+    display: block;
+  }
+}
+
+/*
+form
+************************************/
+
+.form {
+  width: 80%;
+  margin: 70px auto;
+}
+
+.form label {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.form input {
+  background-color: #f5f5f5;
+}
+
+.form button {
+  margin: 30px 0;
+}
+
+.form a {
+  color: rgb(16, 155, 248);
+  text-decoration: none;
+}
+
+/*
+Footer
+************************************/
+
+footer {
+  background-color: #292828;
+  color: #f7f0f0;
+  width: 100%;
+}
+
+footer .menu {
+  padding: 30px;
+  display: flex;
+}
+
+footer .menu-list {
+  padding: 20px;
+}
+
+footer .menu-list .sub-title {
+  font-size: 30px;
+}
+
+footer .menu-list ul {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+footer .menu-list li {
+  font-size: 12px;
+  list-style: none;
+  padding: 8px 0;
+}
+
+footer .menu-list li a {
+  color: #f7f0f0;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  footer .menu-list .sub-title {
+    font-size: 22px;
+  }
 }

@@ -1,6 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { getUser } from "../../reducks/user/selectors";
 
 const Footer = () => {
+  const selector = useSelector((state) => state);
+  const user = getUser(selector);
   return (
     <footer>
       <div class="menu">
@@ -16,12 +20,20 @@ const Footer = () => {
             <li>
               <a href="">Item Lists</a>
             </li>
-            <li>
-              <a href="">Sign In</a>
-            </li>
-            <li>
-              <a href="">Sign Up</a>
-            </li>
+            {user.token ? (
+              <li>
+                <a href="/signout">Sign Out</a>
+              </li>
+            ) : (
+              <>
+                <li>
+                  <a href="/signin">Sign In</a>
+                </li>
+                <li>
+                  <a href="/signup">Sign Up</a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div class="menu-list">

@@ -2,8 +2,13 @@ import React from "react";
 import ImageTechShopLogo from "../../assets/img/techshop-logo.svg";
 import ImageIconCart from "../../assets/img/icon-cart.svg";
 import ImageIconSearch from "../../assets/img/icon-search.svg";
+import { useSelector } from "react-redux";
+import { getUser } from "../../reducks/user/selectors";
 
 const Header = () => {
+  const selector = useSelector((state) => state);
+  const user = getUser(selector);
+
   return (
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -29,15 +34,20 @@ const Header = () => {
             <li class="nav-item">
               <a href="/">Categories</a>
             </li>
-            <li class="nav-item">
-              <a href="/">Items Lists</a>
-            </li>
-            <li class="nav-item">
-              <a href="/">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <a href="/">Sign Up</a>
-            </li>
+            {user.token ? (
+              <li class="nav-item">
+                <a href="/signout">Sign Out</a>
+              </li>
+            ) : (
+              <>
+                <li class="nav-item">
+                  <a href="/signin">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/signup">Sign Up</a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <img src={ImageIconCart} class="icon-cart" />

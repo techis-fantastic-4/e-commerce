@@ -48,8 +48,6 @@ class UserSignInSerializer(serializers.ModelSerializer):
     # Override the create method
     def create(self, validated_data):
         user = User.objects.filter(email=validated_data['email'])
-        print(user[0].email)
-        print(user[0].password)
 
         # Check the password
         if len(user) > 0 and check_password(validated_data['password'], user[0].password):

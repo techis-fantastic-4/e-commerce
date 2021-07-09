@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../assets/img/loading.gif";
 import API from "../API";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getUser } from "../reducks/user/selectors";
+import { push } from "connected-react-router";
+import { signOutAction } from "../reducks/user/actions";
 
 const api = new API();
 
 const UserList = () => {
+  const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const user = getUser(selector);
   const [users, setUsers] = useState([]);
@@ -20,6 +23,7 @@ const UserList = () => {
         })
         .catch((error) => {
           alert("Failed to connect API: /users/");
+          dispatch(push("/"));
         });
     }
   }, [user]);

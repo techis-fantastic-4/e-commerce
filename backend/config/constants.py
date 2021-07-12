@@ -10,3 +10,4 @@ STATUS = (
     ('deleted','Deleted'),
 )
 STATUS_DICT = dict(STATUS)
+

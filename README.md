@@ -36,9 +36,28 @@ This is a project for e-commerce.
 
 - `git clone git@github.com:techis-fantastic-4/e-commerce.git`
 
-2. Access
+2. Backend
 
-- Frontend: <http://localhost:3000>
+```
+cd backend
+Python -m venv env
+(For Mac) source env/bin/activate
+(For Windows) env/Scripts\activate
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+# Open http://127.0.0.1:8000/
+```
+
+3. Frontend
+```
+cd frontend
+npm install
+npm start
+# Open http://127.0.0.1:3000/
+```
+
 - API:<http://localhost:8000>
 
 ## Branch Rules

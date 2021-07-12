@@ -19,19 +19,19 @@ class Products(models.Model):
         'Main Image', blank=False, null=False
     )
     sku = models.IntegerField(
-        'SKU Number', blank=False, null=False, db_index=True, max_digits=11
+        'SKU Number', blank=False, null=False, db_index=True
     )
-    category_id = models.ForeignKey(
-        'Category ID', on_delete=models.CASCADE, db_index=True, max_digits=11
-    )
+    # category_id = models.ForeignKey(
+    #     'Category ID', on_delete=models.CASCADE, db_index=True
+    # )
     quantity = models.IntegerField(
-        'Inventory Quantity', blank=False, null=False, default=0, max_digits=5
+        'Inventory Quantity', blank=False, null=False, default=0
     )
     price = models.DecimalField(
-        'Price', blank=False, null=False
+        'Price', blank=False, null=False, max_digits=11, decimal_places=2
     )
     discount_price = models.DecimalField(
-        'Discount Price', blank=True
+        'Discount Price', blank=True, max_digits=11, decimal_places=2
     )
     created_at = models.DateTimeField(
         'Created At', blank=True, auto_now_add=True

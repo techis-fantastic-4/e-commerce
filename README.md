@@ -58,8 +58,6 @@ npm start
 # Open http://127.0.0.1:3000/
 ```
 
-- API:<http://localhost:8000>
-
 ## Branch Rules
 
 There are three branches :<br>

@@ -9,3 +9,4 @@ STATUS = (
     ('open','Open'),
     ('deleted','Deleted'),
 )
+STATUS_DICT = dict(STATUS)

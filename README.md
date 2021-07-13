@@ -90,5 +90,5 @@ There are three branches :<br>
 
 ## Languages Used so far
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=echis-fantastic-4&layout=compact)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=techis-fantastic-4&layout=compact)
 

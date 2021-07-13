@@ -1,3 +1,6 @@
+https://img.shields.io/github/issues/techis-fantastic-4/e-commerce
+https://img.shields.io/github/forks/techis-fantastic-4/e-commerce
+https://img.shields.io/github/stars/techis-fantastic-4/e-commerce
 
 # TECHShop
 

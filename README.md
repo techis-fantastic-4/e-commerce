@@ -88,7 +88,4 @@ There are three branches :<br>
 
 [Coding Style Guide for Django](https://github.com/Tech-i-s/techis-crm/wiki/Coding-Style-Guide-for-TECH-I.S.-CRM)
 
-## Languages Used so far
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=techis-fantastic-4/e-commerce&layout=compact)
-
+https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=ghaiyur-musubi&langs_count=10&layout=compact&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR

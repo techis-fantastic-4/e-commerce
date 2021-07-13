@@ -9,4 +9,5 @@ def constants(request):
 
     return {
         'STATUS_DICT': STATUS_DICT,
+        'CATEGORIES_DICT': CATEGORIES_DICT,
     }

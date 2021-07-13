@@ -21,9 +21,9 @@ class Product(models.Model):
     sku = models.IntegerField(
         'SKU Number', blank=False, null=False, db_index=True
     )
-    # category_id = models.ForeignKey(
-    #     'Category ID', on_delete=models.CASCADE, db_index=True
-    # )
+    category_name = models.CharField(
+        'Category Name', blank=False, null=False,default='others', max_length=14, db_index=True, choices = CATEGORIES
+    )
     quantity = models.IntegerField(
         'Inventory Quantity', blank=False, null=False, default=0
     )

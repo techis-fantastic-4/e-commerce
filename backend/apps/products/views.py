@@ -4,5 +4,5 @@ from .models import Product
 
 
 class ProductList(generics.ListAPIView):
-    queryset = Product.objects.order_by('created_at').reverse().filter(status='open')[:20]
+    queryset = Product.objects.order_by('created_at').reverse().filter(status='open')
     serializer_class = ProductSerializer

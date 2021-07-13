@@ -12,7 +12,6 @@ body {
 
 .content {
   width: 900px;
-  height: 100%;
   margin: 0 auto;
 }
 
@@ -322,6 +321,10 @@ form
 }
 
 /*
+Product List 
+************************************/
+
+/*
 Footer
 ************************************/
 
@@ -365,3 +368,4 @@ footer .menu-list li a {
     font-size: 22px;
   }
 }
+

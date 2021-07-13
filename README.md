@@ -88,4 +88,4 @@ There are three branches :<br>
 
 [Coding Style Guide for Django](https://github.com/Tech-i-s/techis-crm/wiki/Coding-Style-Guide-for-TECH-I.S.-CRM)
 
-![github stats](https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=ghaiyur-musubi&langs_count=10&layout=compact&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR)
+![github stats](https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=ghaiyur-musubi&langs_count=10&layout=compact&role=ORGANIZATION_MEMBER,COLLABORATOR)

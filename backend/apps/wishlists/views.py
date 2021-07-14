@@ -10,3 +10,12 @@ class WishList(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['user_id']
     
+
+class WishlistAdd(generics.CreateAPIView):
+    queryset = Wishlist.objects.all()
+    serializer_class = WishlistSerializer
+
+
+class WishlistDelete(generics.DestroyAPIView):
+    queryset = Wishlist.objects.all()
+    serializer_class = WishlistSerializer

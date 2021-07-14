@@ -39,14 +39,14 @@ const Header = () => {
                 <a href="/signout">Sign Out</a>
               </li>
             ) : (
-              <>
+              <React.Fragment>
                 <li class="nav-item">
                   <a href="/signin">Sign In</a>
                 </li>
                 <li class="nav-item">
                   <a href="/signup">Sign Up</a>
                 </li>
-              </>
+              </React.Fragment>
             )}
           </ul>
         </div>

@@ -25,14 +25,14 @@ const Footer = () => {
                 <a href="/signout">Sign Out</a>
               </li>
             ) : (
-              <>
+              <div>
                 <li>
                   <a href="/signin">Sign In</a>
                 </li>
                 <li>
                   <a href="/signup">Sign Up</a>
                 </li>
-              </>
+              </div>
             )}
           </ul>
         </div>

@@ -18,6 +18,7 @@ const ProductList = () => {
 
   return (
     <div class="product-list">
+      <h1>PRODUCT LIST</h1>
         <div class="content">
             <div class="sidebar">
                 

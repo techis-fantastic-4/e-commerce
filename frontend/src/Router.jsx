@@ -21,7 +21,7 @@ const Router = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Switch>
         <Route exact path={"/"} component={Home} />
         <Route exact path={"/signup"} component={SignUp} />
@@ -30,7 +30,7 @@ const Router = () => {
         <Route exact path={"/userlist-auth-sample"} component={UserList} />
         <Route exact path={"/products"} component={ProductList} />
       </Switch>
-    </>
+    </div>
   );
 };
 export default Router;

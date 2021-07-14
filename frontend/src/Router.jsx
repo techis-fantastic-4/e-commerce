@@ -6,6 +6,7 @@ import SignUp from "./containers/SignUp";
 import SignIn from "./containers/SignIn";
 import SignOut from "./containers/SignOut";
 import UserList from "./containers/UserList";
+import ProductDetails from "./containers/ProductDetails";
 import { getUser } from "./reducks/user/selectors";
 import { fetchUserFromLocalStorage } from "./reducks/user/operations";
 
@@ -27,6 +28,7 @@ const Router = () => {
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />
         <Route exact path={"/userlist-auth-sample"} component={UserList} />
+        <Route exact path={"/product-details"} component={ProductDetails} />
       </Switch>
     </>
   );

@@ -20,7 +20,7 @@ const Router = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       <Switch>
         <Route exact path={"/"} component={Home} />
         <Route exact path={"/signup"} component={SignUp} />
@@ -28,7 +28,7 @@ const Router = () => {
         <Route exact path={"/signout"} component={SignOut} />
         <Route exact path={"/userlist-auth-sample"} component={UserList} />
       </Switch>
-    </>
+    </React.Fragment>
   );
 };
 export default Router;

@@ -1,7 +1,6 @@
 import re
 from typing import Generic
 from rest_framework import generics
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import UserSerializer, UserSignUpSerializer, UserSignInSerializer
 from .models import User

@@ -10,18 +10,18 @@ class WishList(CustomLoginRequiredMixin, generics.ListAPIView):
     serializer_class = WishlistSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['user_id']
-    
+
     def get(self, request, *args, **kwargs):
         # Filter by login user
         self.queryset = Wishlist.objects.order_by('-created_at').filter(user=request.login_user)
         return self.list(request, *args, **kwargs)
 
-class WishlistAdd(generics.CreateAPIView):
+class WishlistAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
     queryset = Wishlist.objects.all()
     serializer_class = WishlistSerializer
 
 
-class WishlistDelete(generics.DestroyAPIView):
+class WishlistDelete(CustomLoginRequiredMixin, generics.DestroyAPIView):
     queryset = Wishlist.objects.all()
     serializer_class = WishlistSerializer
 

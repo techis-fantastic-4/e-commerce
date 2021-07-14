@@ -16,6 +16,17 @@ class WishList(CustomLoginRequiredMixin, generics.ListAPIView):
         self.queryset = Wishlist.objects.order_by('-created_at').filter(user=request.login_user)
         return self.list(request, *args, **kwargs)
 
+class WishlistAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
+    queryset = Wishlist.objects.all()
+    serializer_class = WishlistSerializer
+
+
+class WishlistDelete(CustomLoginRequiredMixin, generics.DestroyAPIView):
+    queryset = Wishlist.objects.all()
+    serializer_class = WishlistSerializer
+
+    
+
 
 # class WishAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
 

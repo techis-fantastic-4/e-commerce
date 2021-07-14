@@ -19,10 +19,10 @@ const ProductList = () => {
   return (
     <div class="product-list">
         <div class="content">
-                <div class="sidebar">
+            <div class="sidebar">
                 
             </div>
-                <div class="main">
+            <div class="main">
 
             </div>
         </div>

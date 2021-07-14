@@ -15,3 +15,10 @@ class WishList(CustomLoginRequiredMixin, generics.ListAPIView):
         # Filter by login user
         self.queryset = Wishlist.objects.order_by('-created_at').filter(user=request.login_user)
         return self.list(request, *args, **kwargs)
+
+
+# class WishAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
+
+#     def post(self, request, *args, **kwargs):
+#         request.data.post['user_id'] = request.login_user.id
+#         return self.create(request, *args, **kwargs)

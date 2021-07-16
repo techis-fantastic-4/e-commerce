@@ -104,3 +104,19 @@ export default class API {
         return response
     }
 }
+
+    /////////////////////////
+    // Products
+    /////////////////////////
+
+    getProducts = async () => {
+        const products = await api
+            .get("/products/")
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return products
+    }

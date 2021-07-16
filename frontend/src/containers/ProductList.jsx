@@ -29,16 +29,16 @@ const ProductList = () => {
                 <li><a href="">Wearables<img src={ImgArrowDown} class="" /></a></li>
               </ul>
             </div>
-            <div class="main">
+            <div class="main">  
               <ul>
-                <li>Apple Watch</li>
-                <li>Apple iPhone</li>
-                <li>Apple iMac</li>
+                <li><p>Apple Watch</p></li>
+                <li><p>Apple iPhone</p></li>
+                <li><p>Apple iMac</p></li>
               </ul>
               <ul>
-                <li>Samsung Watch</li>
-                <li>Samsung Galaxy</li>
-                <li>Samsung Tab</li>
+                <li><p>Samsung Watch</p></li>
+                <li><p>Samsung Galaxy</p></li>
+                <li><p>Samsung Tab</p></li>
               </ul>
             </div>
         </div>

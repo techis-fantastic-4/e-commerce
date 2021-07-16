@@ -32,13 +32,13 @@ const ProductList = () => {
             <div class="main">
               <ul>
                 <li>Apple Watch</li>
-                <li>Apple Watch</li>
-                <li>Apple Watch</li>
+                <li>Apple iPhone</li>
+                <li>Apple iMac</li>
               </ul>
               <ul>
-                <li>Apple Watch</li>
-                <li>Apple Watch</li>
-                <li>Apple Watch</li>
+                <li>Samsung Watch</li>
+                <li>Samsung Galaxy</li>
+                <li>Samsung Tab</li>
               </ul>
             </div>
         </div>

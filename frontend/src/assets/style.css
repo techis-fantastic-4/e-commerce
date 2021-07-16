@@ -387,6 +387,7 @@ Product List
 .product-list .main li {
   list-style: none;
   width: 30%;
+  height: 200px;
   margin: 3px;
   background-color: gray;
 }

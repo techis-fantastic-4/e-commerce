@@ -2,6 +2,9 @@ const initialState = {
     posts: {
         list: []
     },
+    products: {
+        list: []
+    },
     user: {
         user_name: "",
         email: "",

@@ -25,14 +25,14 @@ const Footer = () => {
                 <a href="/signout">Sign Out</a>
               </li>
             ) : (
-              <>
+              <React.Fragment>
                 <li>
                   <a href="/signin">Sign In</a>
                 </li>
                 <li>
                   <a href="/signup">Sign Up</a>
                 </li>
-              </>
+              </React.Fragment>
             )}
           </ul>
         </div>

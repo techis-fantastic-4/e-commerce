@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const dispatch = useDispatch();
     const [product, setProduct] = useState([]);
     
-    let id = window.location.pathname.split("/product")[1];
+    let id = window.location.pathname.split("/products")[1];
     if (id !== "") {
         id = id.split("/")[1];
     }
@@ -21,6 +21,8 @@ const ProductDetails = () => {
         });
       }, [product]);
 
+    
+    console.log(product.results);
     return (
         <div className="product-details">
             <section className="product">

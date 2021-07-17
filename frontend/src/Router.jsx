@@ -28,7 +28,7 @@ const Router = () => {
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />
         <Route exact path={"/userlist-auth-sample"} component={UserList} />
-        <Route path={"/product(/:id)?"} component={ProductDetails} />
+        <Route path={"/products(/:id)?"} component={ProductDetails} />
       </Switch>
     </React.Fragment>
   );

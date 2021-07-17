@@ -105,7 +105,7 @@ export default class API {
     }
     getProducts = async () => {
         const products = await api
-            .get("/product/")
+            .get("/products/")
             .then((response) => {
                 return response.data
             })
@@ -116,7 +116,7 @@ export default class API {
     }
     getProduct = async (id) => {
         const product = await api
-            .get("/product/" + id + "/")
+            .get("/products/" + id + "/")
             .then((response) => {
                 return response.data
             })

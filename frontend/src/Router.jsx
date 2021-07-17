@@ -28,7 +28,7 @@ const Router = () => {
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />
         <Route exact path={"/userlist-auth-sample"} component={UserList} />
-        <Route exact path={"/product-details"} component={ProductDetails} />
+        <Route path={"/product(/:id)?"} component={ProductDetails} />
       </Switch>
     </>
   );

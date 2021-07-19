@@ -6,6 +6,8 @@ import { getProducts } from "../reducks/products/selectors";
 import { push } from "connected-react-router";
 import ImgArrowDown from "../assets/img/icon-arrow-down.svg";
 import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
+import ImgSampleProduct from "../assets/img/sample-product.png";
+import Pagination from "../components/common/Pagination.jsx"
 
 const api = new API();
 const ProductList = () => {
@@ -15,7 +17,6 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    dispatch(getProducts());
   }, []);
 
   return (
@@ -32,23 +33,26 @@ const ProductList = () => {
             </div>
             <div class="main">  
               <ul>
-              {products.map((product) => (
-              <li key={product.id} product={product} />
-               ))}
-                <li><p>Apple Watch</p></li>
-                <li><p>Apple iPhone</p></li>
-                <li><p>Apple iMac</p></li>
-              </ul>
-              <ul>
-                <li><p>Samsung Watch</p></li>
-                <li><p>Samsung Galaxy</p></li>
-                <li><p>Samsung Tab</p></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
+              <li><img src={ImgSampleProduct} /><div class="product-name">Samsung Note</div><div class="product-price">PRICE : $399.99</div></li>
               </ul>
             </div>
         </div>
-        <div class="pagination">
-            
-        </div>
+        <Pagination
+              totalCount={10}
+              // resultCount={6}
+              previous={'https://google.com'}
+              next={null}
+              pageSize={6}
+              pageNumber={2}
+            />
     </div>
   );
 };

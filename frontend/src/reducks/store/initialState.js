@@ -3,7 +3,7 @@ const initialState = {
         list: []
     },
     products: {
-        list: []
+        
     },
     user: {
         user_name: "",

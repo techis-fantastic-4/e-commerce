@@ -15,6 +15,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    dispatch(getProducts());
   }, []);
 
   return (
@@ -31,6 +32,9 @@ const ProductList = () => {
             </div>
             <div class="main">  
               <ul>
+              {products.map((product) => (
+              <li key={product.id} product={product} />
+               ))}
                 <li><p>Apple Watch</p></li>
                 <li><p>Apple iPhone</p></li>
                 <li><p>Apple iMac</p></li>

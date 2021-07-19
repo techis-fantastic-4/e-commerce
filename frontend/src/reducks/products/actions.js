@@ -1,5 +1,5 @@
 export const FETCH_PRODUCT = "FETCH_PRODUCT";
-export const fetchProductssAction = (products) => {
+export const fetchProductsAction = (products) => {
     return {
         type: "FETCH_PRODUCT",
         payload: products

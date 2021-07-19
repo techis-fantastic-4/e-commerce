@@ -8,6 +8,7 @@ import ImgArrowDown from "../assets/img/icon-arrow-down.svg";
 import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx"
+import {fetchProducts} from "../reducks/products/operations"
 
 const api = new API();
 const ProductList = () => {
@@ -49,7 +50,7 @@ const ProductList = () => {
               totalCount={10}
               // resultCount={6}
               previous={'https://google.com'}
-              next={null}
+              next={'https://google.com'}
               pageSize={6}
               pageNumber={2}
             />

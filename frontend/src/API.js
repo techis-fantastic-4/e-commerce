@@ -103,7 +103,7 @@ export default class API {
             })
         return response
     }
-}
+
 
     /////////////////////////
     // Products
@@ -120,3 +120,4 @@ export default class API {
             })
         return products
     }
+}

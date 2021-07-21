@@ -295,28 +295,28 @@ Home
 
 /* Product details */
 
-.details-label {
+.product-details .details-label {
   margin: 5rem 0 0 5rem;
 }
 
-.details-img {
+.product-details .details-img {
   width: 30rem;
   margin-left: 5rem;
   display: inline-block;
 }
 
-.details-name {
+.product-details .details-name {
   font-size: large;
   margin-left: 5rem;
   display: flex;
 }
 
-.details-box {
+.product-details .details-box {
   display: inline-block;
   margin-left: 2rem;
 }
 
-.details-desc {
+.product-details .details-desc {
   margin-left: 5rem;
 }
 /*

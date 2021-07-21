@@ -70,8 +70,8 @@ const ProductList = () => {
           totalCount={products["count"]}
           previous={products["previous"]}
           next={products["next"]}
-          // pageSize={products["page_size"]}
-          // pageNumber={products["page_number"]}
+          pageSize={6}
+          pageNumber={products["page_number"]}
         />
       )}
     </div>

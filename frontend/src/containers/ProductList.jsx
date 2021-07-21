@@ -9,15 +9,21 @@ import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
+import queryString from "query-string";
 
 const api = new API();
 const ProductList = () => {
+  const parsed = queryString.parse(window.location.search);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    if (parsed.page == undefined) {
+      dispatch(fetchProducts(1));
+    } else {
+      dispatch(fetchProducts(parsed.page));
+    }
   }, []);
 
   return (

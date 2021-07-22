@@ -109,9 +109,9 @@ export default class API {
     // Products
     /////////////////////////
 
-    getProducts = async () => {
+    getProducts = async (page) => {
         const products = await api
-            .get("/products/")
+            .get("/products/?page=" + page)
             .then((response) => {
                 return response.data
             })

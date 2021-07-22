@@ -22,19 +22,23 @@ const ProductDetails = () => {
       }, []);
 
     
-    console.log(product.results);
+    let status = "";
+    if (product.results[0].quantity > 0) {
+        status = "In Stock";
+    } else {
+        status = "Out of Stock"
+    }
+
     return (
         <div className="product-details">
             <section className="product">
                 <div className="details-card">
                     <h1 className="details-label">Item Details</h1>
-                    <img src={ImgProductCamera} alt="product" class="details-img" />    
-                        {/* this.state.product.image */}
+                    <img src={product.results[0].main_image} alt="product" class="details-img" />    
+                        {/* product.results[0].main_image */}
                     <div class="text-area details-box">
-                        <div class="product-price">PRICE : $929.99</div>
-                            {/* this.state.product.price */}
-                        <div class="product-status">STATUS : In Stock</div>
-                            {/* this.state.product.status */}
+                        <div class="product-price">PRICE : {product.results[0].price}</div>
+                        <div class="product-status">STATUS : {status}</div>
                         <div class="form-group" style={{marginBottom: "1rem"}}>
                             <select class="custom-select">
                                 <option>Qty 1</option>
@@ -51,8 +55,7 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <p class="details-name">
-                        <strong>SONY PLAYSTATION 4 PRO WHITE VERSION</strong>
-                        {/* this.state.product.name */}
+                        <strong>{product.results[0].name}</strong>
                     </p>
                 </div>
                 <hr />
@@ -60,8 +63,7 @@ const ProductDetails = () => {
                         Item Details:
                     </p>
                     <p class="details-desc">
-                        Play the greatest games and PS4 exclusive, take your adventures online with PS plus and Stream or download TV shows and movies from Netflix, PS store or wherever you get your favourite entertainment.
-                        {/* this.state.product.desc */}
+                        {product.results[0].description}
                     </p>
                 <hr />
 

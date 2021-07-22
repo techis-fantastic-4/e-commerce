@@ -8,7 +8,7 @@ const api = new API();
 
 const ProductDetails = () => {
     const dispatch = useDispatch();
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState(null);
     
     let id = window.location.pathname.split("/products")[1];
     if (id !== "") {
@@ -18,12 +18,14 @@ const ProductDetails = () => {
     useEffect(() => {
         api.getProduct(id).then((product) => {
           setProduct(product);
+          console.log(product.results[0]);
         });
       }, []);
 
     
+    
     let status = "";
-    if (product.results[0].quantity > 0) {
+    if (product && product.results[0].quantity > 0) {
         status = "In Stock";
     } else {
         status = "Out of Stock"
@@ -34,11 +36,18 @@ const ProductDetails = () => {
             <section className="product">
                 <div className="details-card">
                     <h1 className="details-label">Item Details</h1>
-                    <img src={product.results[0].main_image} alt="product" class="details-img" />    
+                    {product && (
+                        <img src={ImgProductCamera} alt="product" class="details-img" />    
+                    )}
+                    
                         {/* product.results[0].main_image */}
                     <div class="text-area details-box">
+                    {product && (
                         <div class="product-price">PRICE : {product.results[0].price}</div>
+                    )}  
+                    {product && (
                         <div class="product-status">STATUS : {status}</div>
+                    )}    
                         <div class="form-group" style={{marginBottom: "1rem"}}>
                             <select class="custom-select">
                                 <option>Qty 1</option>
@@ -55,7 +64,10 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <p class="details-name">
+                    {product && (
                         <strong>{product.results[0].name}</strong>
+                    )}    
+                        
                     </p>
                 </div>
                 <hr />
@@ -63,7 +75,10 @@ const ProductDetails = () => {
                         Item Details:
                     </p>
                     <p class="details-desc">
-                        {product.results[0].description}
+                    {product && (
+                        <div>{product.results[0].description}</div>
+                    )}
+                        
                     </p>
                 <hr />
 

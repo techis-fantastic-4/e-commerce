@@ -3,9 +3,9 @@ import {fetchProductsAction} from "./actions";
 
 const api = new API();
 
-export const fetchProducts = () => {
+export const fetchProducts = (page) => {
     return async (dispatch) => {
-        return api.getProducts()
+        return api.getProducts(page)
             .then((products) => {
                 dispatch(fetchProductsAction(products))
             }).catch((error) => {

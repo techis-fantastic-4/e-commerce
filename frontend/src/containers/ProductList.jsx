@@ -14,6 +14,7 @@ import queryString from "query-string";
 const api = new API();
 const ProductList = () => {
   const parsed = queryString.parse(window.location.search);
+  const [page, setPage] = useState(1);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
@@ -22,6 +23,7 @@ const ProductList = () => {
     if (parsed.page == undefined) {
       dispatch(fetchProducts(1));
     } else {
+      setPage(parsed.page);
       dispatch(fetchProducts(parsed.page));
     }
   }, []);
@@ -74,10 +76,10 @@ const ProductList = () => {
       {products["results"] && products["results"].length > 0 && (
         <Pagination
           totalCount={products["count"]}
-          // previous={products["previous"]}
-          // next={products["next"]}
+          previous={products["previous"]}
+          next={products["next"]}
           pageSize={6}
-          pageNumber={products["page_number"]}
+          pageNumber={page}
         />
       )}
     </div>

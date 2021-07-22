@@ -74,8 +74,8 @@ const ProductList = () => {
       {products["results"] && products["results"].length > 0 && (
         <Pagination
           totalCount={products["count"]}
-          previous={products["previous"]}
-          next={products["next"]}
+          // previous={products["previous"]}
+          // next={products["next"]}
           pageSize={6}
           pageNumber={products["page_number"]}
         />

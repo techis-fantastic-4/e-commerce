@@ -21,4 +21,3 @@ CATEGORIES = (
     ('others','Others'),
 )
 CATEGORIES_DICT = dict(CATEGORIES)
-

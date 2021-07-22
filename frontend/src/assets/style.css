@@ -365,3 +365,46 @@ footer .menu-list li a {
     font-size: 22px;
   }
 }
+
+.fav-header{
+  display: flex;
+  justify-content: space-between;
+}
+.favorites{
+  padding: 4%;
+}
+
+.edit-button{
+  float: right;
+  height: 2rem;
+  width: 4rem;
+  margin: 4%;
+  
+}
+
+.fav-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 3% 3%;
+}
+
+.Card{
+  padding: 1%;
+  margin: 3%;
+}
+
+.Card .card-body{
+  line-height: 0.5;
+}
+
+.card-image img{
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .fav-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

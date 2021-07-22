@@ -8,6 +8,7 @@ import SignOut from "./containers/SignOut";
 import UserList from "./containers/UserList";
 import { getUser } from "./reducks/user/selectors";
 import { fetchUserFromLocalStorage } from "./reducks/user/operations";
+import WishList from "./containers/WishList";
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const Router = () => {
     <React.Fragment>
       <Switch>
         <Route exact path={"/"} component={Home} />
+        <Route exact path={"/wishlist"} component={WishList} />
         <Route exact path={"/signup"} component={SignUp} />
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />

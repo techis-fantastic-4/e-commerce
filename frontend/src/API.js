@@ -103,4 +103,21 @@ export default class API {
             })
         return response
     }
+
+
+    /////////////////////////
+    // Products
+    /////////////////////////
+
+    getProducts = async (page) => {
+        const products = await api
+            .get("/products/?page=" + page)
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return products
+    }
 }

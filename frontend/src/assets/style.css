@@ -45,8 +45,9 @@ header nav {
 }
 
 header nav .logo {
-  width: 120px;
+  width: 12rem;
   padding-right: 50px;
+  margin-right: 12rem;
 }
 
 header nav a {
@@ -55,7 +56,7 @@ header nav a {
 }
 
 header nav li {
-  padding-right: 30px;
+  padding-right: 6rem;
 }
 
 header nav .navbar-brand {
@@ -296,28 +297,41 @@ Home
 /* Product details */
 
 .product-details .details-label {
-  margin: 5rem 0 0 5rem;
+  margin: 5rem 0 0 10rem;
 }
 
 .product-details .details-img {
   width: 30rem;
-  margin-left: 5rem;
+  margin-left: 10rem;
   display: inline-block;
 }
 
 .product-details .details-name {
   font-size: large;
-  margin-left: 5rem;
+  margin-left: 10rem;
   display: flex;
 }
 
 .product-details .details-box {
   display: inline-block;
-  margin-left: 2rem;
+  margin-left: 10rem;
+  background-color: lightgrey;
+  padding: 2rem;
+  width: 20rem;
 }
-
+.product-details hr {
+  width: 50rem;
+  margin-left: 10rem;
+}
+.form-control {
+  width: 4rem;
+}
+#add-cart-btn {
+  width: 100%;
+}
 .product-details .details-desc {
-  margin-left: 5rem;
+  margin-left: 10rem;
+  width: 50rem;
 }
 /*
 form

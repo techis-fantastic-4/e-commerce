@@ -19,7 +19,7 @@ const ProductDetails = () => {
         api.getProduct(id).then((product) => {
           setProduct(product);
         });
-      }, [product]);
+      }, []);
 
     
     console.log(product.results);
@@ -33,7 +33,7 @@ const ProductDetails = () => {
                     <div class="text-area details-box">
                         <div class="product-price">PRICE : $929.99</div>
                             {/* this.state.product.price */}
-                        <div class="product-status">STATUS : Status</div>
+                        <div class="product-status">STATUS : In Stock</div>
                             {/* this.state.product.status */}
                         <div class="form-group" style={{marginBottom: "1rem"}}>
                             <label for="exampleFormControlSelect1">QUANTITY : </label>
@@ -46,13 +46,13 @@ const ProductDetails = () => {
                             </select>
                         </div>
                         <div class="cta-area">
-                            <a class="btn btn-primary" href="   /">
+                            <a class="btn btn-primary" id="add-cart-btn" href="   /">
                                 Add to Cart
                             </a>
                         </div>
                     </div>
                     <p class="details-name">
-                        NAME OF PRODUCT GOES HERE!
+                        <strong>SONY PLAYSTATION 4 PRO WHITE VERSION</strong>
                         {/* this.state.product.name */}
                     </p>
                 </div>
@@ -61,7 +61,7 @@ const ProductDetails = () => {
                         Item Details:
                     </p>
                     <p class="details-desc">
-                        Here is where there will be a lot more details related to the product.
+                        Play the greatest games and PS4 eclusive, take your adventures online with PS plus and Stream or download TV shows and movies from Netflix, PS store or wherever you get your favourite entertainment.
                         {/* this.state.product.desc */}
                     </p>
                 <hr />

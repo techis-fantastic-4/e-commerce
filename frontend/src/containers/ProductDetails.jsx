@@ -36,13 +36,12 @@ const ProductDetails = () => {
                         <div class="product-status">STATUS : In Stock</div>
                             {/* this.state.product.status */}
                         <div class="form-group" style={{marginBottom: "1rem"}}>
-                            <label for="exampleFormControlSelect1">QUANTITY : </label>
-                            <select class="form-control"  style={{backgroundColor: "#FAE706"}} id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="custom-select">
+                                <option>Qty 1</option>
+                                <option>Qty 2</option>
+                                <option>Qty 3</option>
+                                <option>Qty 4</option>
+                                <option>Qty 5</option>
                             </select>
                         </div>
                         <div class="cta-area">
@@ -61,7 +60,7 @@ const ProductDetails = () => {
                         Item Details:
                     </p>
                     <p class="details-desc">
-                        Play the greatest games and PS4 eclusive, take your adventures online with PS plus and Stream or download TV shows and movies from Netflix, PS store or wherever you get your favourite entertainment.
+                        Play the greatest games and PS4 exclusive, take your adventures online with PS plus and Stream or download TV shows and movies from Netflix, PS store or wherever you get your favourite entertainment.
                         {/* this.state.product.desc */}
                     </p>
                 <hr />

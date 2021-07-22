@@ -323,9 +323,13 @@ Home
   width: 50rem;
   margin-left: 10rem;
 }
-.form-control {
+.product-details .form-control {
   width: 4rem;
 }
+.product-details .custom-select {
+  background-color: #fae706;
+}
+
 #add-cart-btn {
   width: 100%;
 }

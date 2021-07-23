@@ -29,7 +29,15 @@ const Cart = () => {
               <div class="bottom">
                 <div class="price">$399.99</div>
                 <div class="quantity-trash">
-                  <div class="quantity">Quantity</div>
+                <label htmlFor="dropdown-items">Qty:</label>
+                  <select class="quantity" id="dropdown-items">
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                  </select>
                   <div class="trash">
                     <img src={ImgIconTrash} alt="" />
                   </div>
@@ -38,7 +46,18 @@ const Cart = () => {
             </div>
           </div>
         </section>
-        <section class="checkout-area"></section>
+        <section class="checkout-area">
+          <div class='info-total'>
+            <h4 class='heading-title'>SUBTOTAL</h4>
+            <h5 class='total-item'><span class='item-quantity'>(3)</span>ITEMS</h5>
+            <h5 class='total-value'>$699.99</h5>
+            <button class='button-name' type="submit">PROCEED TO CHECKOUT</button>
+
+          </div>
+          
+
+        </section>
+
       </div>
     </div>
   );

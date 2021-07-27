@@ -120,4 +120,35 @@ export default class API {
             })
         return products
     }
+
+
+    /////////////////////////
+    ///// Wishlist 
+    ////////////////////////
+
+    getWishlist = async () => {
+        const wishlist = await api
+            .get("/wishlists/")
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return wishlist
+    }
+
+    
+
+    deleteWishlist = async (id) => {
+        const response = await api
+            .delete("/wishlists/delete/" + id + "/")
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return response
+    }
 }

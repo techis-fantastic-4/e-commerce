@@ -37,7 +37,7 @@ const ProductDetails = () => {
                 <div className="details-card">
                     <h1 className="details-label">Item Details</h1>
                     <div className="details-container">
-                        <div className="product-image">
+                        <div className="product-image-div">
                             {product && (
                                 <img src={product.results[0].main_image} alt="product" class="details-img" />
                             )}

@@ -299,10 +299,12 @@ Home
 .product-details .details-label {
   margin: 5rem 0 0 10rem;
 }
-
+.product-details .product-image-div {
+  display: inline-block;
+}
 .product-details .details-img {
   width: 30rem;
-  margin-left: 10rem;
+  margin-left: 20rem;
   display: inline-block;
 }
 

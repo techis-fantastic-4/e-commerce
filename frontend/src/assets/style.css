@@ -309,7 +309,7 @@ Home
 }
 
 .product-details .details-name {
-  font-size: large;
+  font-size: x-large;
   margin-left: 10rem;
   display: flex;
 }
@@ -320,6 +320,7 @@ Home
   background-color: lightgrey;
   padding: 1rem;
   width: 20rem;
+  font-size: large;
 }
 
 .product-details .product-price {

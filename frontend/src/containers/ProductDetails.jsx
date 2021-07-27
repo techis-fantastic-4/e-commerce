@@ -83,7 +83,7 @@ const ProductDetails = () => {
                     )}
 
                 </p>
-                <hr />
+                <hr style={{ marginBottom: "5rem" }}/>
 
             </section>
 

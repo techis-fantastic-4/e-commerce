@@ -314,10 +314,18 @@ Home
 
 .product-details .details-box {
   display: inline-block;
-  margin-left: 10rem;
+  margin-left: 20rem;
   background-color: lightgrey;
-  padding: 2rem;
+  padding: 1rem;
   width: 20rem;
+}
+
+.product-details .product-price {
+  margin-bottom: 0.8rem;
+}
+
+.product-details .product-status {
+  margin-bottom: 0.8rem;
 }
 .product-details hr {
   width: 50rem;
@@ -335,6 +343,7 @@ Home
 }
 .product-details .details-desc {
   margin-left: 10rem;
+  margin-bottom: 3rem;
   width: 50rem;
 }
 /*

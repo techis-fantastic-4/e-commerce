@@ -126,9 +126,9 @@ export default class API {
     ///// Wishlist 
     ////////////////////////
 
-    getWishlist = async () => {
+    getWishlist = async (id) => {
         const wishlist = await api
-            .get("/wishlists/")
+            .get("/wishlists/"+ id +"/")
             .then((response) => {
                 return response.data
             })

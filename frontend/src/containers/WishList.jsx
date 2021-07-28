@@ -8,6 +8,7 @@ import { push } from "connected-react-router";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
 import queryString from "query-string";
+import { fetchWishlists } from "../reducks/wishlist/operations";
 
 
 const api = new API();

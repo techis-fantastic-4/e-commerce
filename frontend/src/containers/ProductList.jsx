@@ -17,21 +17,23 @@ const api = new API();
 const ProductList = () => {
   const parsed = queryString.parse(window.location.search);
   const [page, setPage] = useState(1);
-  const [category_name, setCategoryName] = useState(1);
+  const [category_name, setCategoryName] = useState(null);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
 
   useEffect(() => {
-    if (parsed.page == undefined && parsed.category_name == undefined) {
-      dispatch(fetchProducts(1));
-      console.log(dispatch);
-    } else {
+    if (parsed.page != undefined) {
       setPage(parsed.page);
+    }
+    if (parsed.category_name != undefined) {
       setCategoryName(parsed.category_name);
-      dispatch(fetchProducts(parsed.page));
     }
   }, []);
+
+  useEffect(() => {
+    dispatch(fetchProducts(page, category_name));
+  }, [page, category_name]);
 
   return (
     <div class="product-list">
@@ -80,6 +82,7 @@ const ProductList = () => {
       </div>
       {products["results"] && products["results"].length > 0 && (
         <Pagination
+          key={1}
           totalCount={products["count"]}
           previous={products["previous"]}
           next={products["next"]}

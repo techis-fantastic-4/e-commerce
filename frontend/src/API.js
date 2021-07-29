@@ -108,9 +108,13 @@ export default class API {
     /////////////////////////
     // Products
     /////////////////////////
-    getProducts = async (page,category_name) => {
+    getProducts = async (page, category_name) => {
+        let url = "/products/?page=" + page;
+        if (category_name) {
+            url += '&category_name=' + category_name;
+        }
         const products = await api
-            .get("/products/?page=" + page + '&category_name=' + category_name )
+            .get(url)
             .then((response) => {
                 return response.data
             })

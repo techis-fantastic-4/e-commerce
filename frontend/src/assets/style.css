@@ -555,7 +555,7 @@ Cart List
 
 .cart-list {
   width: 80%;
-  margin: 70px auto;
+  margin: 20px auto;
 }
 
 .cart-list .content {
@@ -566,10 +566,43 @@ Cart List
 }
 
 .cart-list .content .product-list {
-  width: 62%;
+  width: 60%;
   margin: 0;
-  padding: 10px 0;
+  padding: 20px 20px;
   background-color: #efecec;
+}
+
+/* .cart-list .content .product-list .product .bottom {
+  padding-top: 30px;
+} */
+
+.cart-list .content .product-list .price {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.product-list label {
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #fae706;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+select {
+  font-size: 25px;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  /* outline: none; */
+  background-color: #fae706;
+  margin-right: 25px;
+}
+
+.bottom .quantity-trash img {
+  width: 100%;
+  height: auto;
 }
 
 .cart-list .content .product-list .product {
@@ -586,7 +619,7 @@ Cart List
   position: relative;
 }
 .cart-list .content .product-list .product .product-info .name {
-  font-size: 20px;
+  font-size: 40px;
   padding-top: 10px;
 }
 
@@ -625,9 +658,9 @@ Cart List
   border-left: 1px solid #464444;
 }
 
-#dropdown-items {
+/* #dropdown-items {
   padding-right: 15px;
-}
+} */
 
 .cart-list
   .content
@@ -637,30 +670,52 @@ Cart List
   .quantity-trash
   .trash
   img {
-  width: 25px;
+  width: 100%;
+  height: auto;
 }
 
 .cart-list .content .checkout-area {
-  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 30px 30px;
-  width: 28%;
+  position: relative;
+  width: 25%;
+  margin: 0 20px;
+  padding: 50px 50px;
   height: min-content;
   background-color: #efecec;
 }
 
-.cart-list .content .checkout-area .info-total {
-  align-items: center;
-  padding: auto;
-  margin: auto;
+.checkout-area .cartinfo-total .heading {
+  position: relative;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.checkout-area .cartinfo-total .itemandprice .total-value {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.checkout-area .cartinfo-total .itemandprice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemandprice .items {
+  padding-right: 50px;
+  font-size: 20px;
 }
 
 .checkout-area .button-name {
   font-size: 15px;
+  padding-top: 15px;
   font-family: "Avenir";
   background-color: #3290ed;
   color: #fff;
   padding: 10px 35px;
-  border-radius: 6%;
-  border: 1px solid #95cfff77;
+  border-radius: 4%;
+  border: 2px solid #95cfff77;
 }

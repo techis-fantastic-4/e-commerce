@@ -121,3 +121,7 @@ export default class API {
         return products
     }
 }
+
+    /////////////////////////
+    // Cart
+    /////////////////////////

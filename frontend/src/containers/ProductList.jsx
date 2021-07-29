@@ -9,6 +9,7 @@ import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
+import SearchByCategory from "../components/common/ProductSearchByCategory";
 
 import queryString from "query-string";
 
@@ -16,15 +17,18 @@ const api = new API();
 const ProductList = () => {
   const parsed = queryString.parse(window.location.search);
   const [page, setPage] = useState(1);
+  const [category_name, setCategoryName] = useState(1);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
 
   useEffect(() => {
-    if (parsed.page == undefined) {
+    if (parsed.page == undefined && parsed.category_name == undefined) {
       dispatch(fetchProducts(1));
+      console.log(dispatch);
     } else {
       setPage(parsed.page);
+      setCategoryName(parsed.category_name);
       dispatch(fetchProducts(parsed.page));
     }
   }, []);

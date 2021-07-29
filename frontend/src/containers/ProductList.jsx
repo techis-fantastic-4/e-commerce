@@ -42,25 +42,31 @@ const ProductList = () => {
           <h3>Category Lists</h3>
           <ul>
             <li>
-              <a class="active" href="">
+              <a href="/products/?category_name=phone">
                 Phone <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=camera">
                 Camera
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=laptop">
                 Laptop
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=watch">
                 Wearables
+                <img src={ImgArrowDown} class="" />
+              </a>
+            </li>
+            <li>
+              <a href="/products/?category_name=play_station">
+                Play Station
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>

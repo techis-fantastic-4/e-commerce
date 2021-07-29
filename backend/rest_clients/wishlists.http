@@ -2,4 +2,4 @@
 # To send the request and get the result, click the 'Send Request' 
 GET http://127.0.0.1:8000/wishlists/ HTTP/1.1
 content-type: application/json
-Authorization: f9012321bd1444f92e05c2ff936246786e1186d028ce854c68278bb33ffc
+Authorization: b88c26601afe8865269473b93965ac7a08d7b7141782cc82bb20f76878cb

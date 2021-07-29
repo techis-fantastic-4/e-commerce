@@ -2,8 +2,8 @@
 # To send the request and get the result, click the 'Send Request' 
 POST http://127.0.0.1:8000/wishlists/add/ HTTP/1.1
 content-type: application/json
-Authorization: 20f7e634366d4836d898ec9cc5d94eebbd0ddf4631ff4878f37f13d92514
+Authorization: b88c26601afe8865269473b93965ac7a08d7b7141782cc82bb20f76878cb
 
 {
-    "product": 128
+    "product": 132
 }

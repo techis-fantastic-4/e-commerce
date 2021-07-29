@@ -28,7 +28,7 @@ export const signUp = (user_name, email, password) => {
 				localStorage.setItem(LOGIN_USER_KEY, JSON.stringify(user));
                 dispatch(push("/"))
             }).catch((error) => {
-                alert("Failed to connect API to add a post")
+                alert("Failed to Sign Up")
                 console.log(error);
             })
    }
@@ -48,7 +48,7 @@ export const signIn = (email, password) => {
 				localStorage.setItem(LOGIN_USER_KEY, JSON.stringify(user));
                 dispatch(push("/"))
             }).catch((error) => {
-                alert("Failed to connect API to add a post")
+                alert("Failed to Sing In")
                 console.log(error);
             })
    }

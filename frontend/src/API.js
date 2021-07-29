@@ -63,6 +63,7 @@ export default class API {
             })
         return posts
     }
+
     /////////////////////////
     // Posts
     /////////////////////////
@@ -104,11 +105,9 @@ export default class API {
         return response
     }
 
-
     /////////////////////////
     // Products
     /////////////////////////
-
     getProducts = async (page) => {
         const products = await api
             .get("/products/?page=" + page)
@@ -121,14 +120,17 @@ export default class API {
         return products
     }
 
-
     /////////////////////////
     ///// Wishlist 
     ////////////////////////
-
-    getWishlist = async (id) => {
+    getWishlists = async (token, page) => {
         const wishlist = await api
-            .get("/wishlists/"+ id +"/")
+            .get("/wishlists/?page=" + page, {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
             .then((response) => {
                 return response.data
             })
@@ -137,12 +139,14 @@ export default class API {
             })
         return wishlist
     }
-
-    
-
-    deleteWishlist = async (id) => {
+    deleteWishlist = async (token, id) => {
         const response = await api
-            .delete("/wishlists/delete/" + id + "/")
+            .delete("/wishlists/delete/" + id + "/", {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
             .then((response) => {
                 return response.data
             })

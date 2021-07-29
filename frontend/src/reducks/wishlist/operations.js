@@ -1,11 +1,12 @@
+import { push } from "connected-react-router";
 import API from "../../API"
 import {fetchWishlistsAction, addwiWshlistAction, deleteWishlistAction} from "./actions";
 
 const api = new API();
 
-export const fetchWishlists = () => {
+export const fetchWishlists = (token, page) => {
     return async (dispatch) => {
-        return api.getWishlists()
+        return api.getWishlists(token, page)
             .then((wishlists) => {
                 dispatch(fetchWishlistsAction(wishlists))
             }).catch((error) => {
@@ -14,11 +15,11 @@ export const fetchWishlists = () => {
     }
 }
 
-export const deleteWishlist = (id) => {
+export const deleteWishlist = (token, id) => {
     return async (dispatch, getState) => {
-        return api.deleteWishlist(id)
+        return api.deleteWishlist(token, id)
             .then((response) => {
-                const prevWishlists = getState().wishlists.list
+                const prevWishlists = getState().wishlists.results
                 const nextWishlists = prevWishlists.filter(wishlist => wishlist.id !== id)
                 dispatch(deleteWishlistAction(nextWishlists))
             }).catch((error) => {

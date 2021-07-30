@@ -126,9 +126,15 @@ export default class API {
     ///// Wishlist 
     ////////////////////////
 
-    getWishlist = async (id) => {
+    getWishlist = async (token, page) => {
+
         const wishlist = await api
-            .get("/wishlists/"+ id +"/")
+            .get("/wishlists/?page"+ page, {               
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
             .then((response) => {
                 return response.data
             })
@@ -140,9 +146,14 @@ export default class API {
 
     
 
-    deleteWishlist = async (id) => {
+    deleteWishlist = async (token, id) => {
         const response = await api
-            .delete("/wishlists/delete/" + id + "/")
+            .delete("/wishlists/delete/" + id + "/", {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
             .then((response) => {
                 return response.data
             })

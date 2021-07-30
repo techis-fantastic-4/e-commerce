@@ -4,5 +4,5 @@ const wishlistsSelector = (state) => state.wishlists;
 
 export const getWishlists = createSelector(
     [wishlistsSelector],
-    state => state.list
+    state => state
 );

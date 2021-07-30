@@ -1,90 +1,82 @@
 import React, { useEffect, useState } from "react";
-import Like from '../assets/img/Like.png';
-import Unlike from '../assets/img/unlike.png';
+import ImgLike from "../assets/img/Like.png";
 import API from "../API";
 import { useSelector, useDispatch } from "react-redux";
-import { getProducts } from "../reducks/products/selectors";
+import { getWishlists } from "../reducks/wishlist/selectors";
+import { getUser } from "../reducks/user/selectors";
 import { push } from "connected-react-router";
 import Pagination from "../components/common/Pagination.jsx";
-import { fetchProducts } from "../reducks/products/operations";
 import queryString from "query-string";
-import { fetchWishlists } from "../reducks/wishlist/operations";
+import { fetchWishlists, deleteWishlist } from "../reducks/wishlist/operations";
+
 
 
 const api = new API();
-const ProductList = () => {
-    const parsed = queryString.parse(window.location.search);
-    const [page, setPage] = useState(1);
-    const dispatch = useDispatch();
-    const selector = useSelector((state) => state);
-    const products = getProducts(selector);
-    const [show, setShow] = useState(false);
-    const [likeUnlike, setLikeUnlike] = useState(true);
-    const [editDone, setEditDone] = useState(true);
-    
+const WishList = () => {
+  const parsed = queryString.parse(window.location.search);
+  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state);
+  const wishlists = getWishlists(selector);
+  const [show, setShow] = useState(false);
+  const [editDone, setEditDone] = useState(true);
+  const user = getUser(selector);
 
-    useEffect(() => {
-        if (parsed.page == undefined) {
-        dispatch(fetchProducts(1));
-        } else {
+  useEffect(() => {
+    if (user.token != "") {
+      if (parsed.page == undefined) {
+        dispatch(fetchWishlists(user.token, 1));
+      } else {
         setPage(parsed.page);
-        dispatch(fetchProducts(parsed.page));
-        }
-    }, []);
+        dispatch(fetchWishlists(user.token, parsed.page));
+      }
+    }
+  }, [user]);
+
+  const unLikeWishlist = (id) => {
+    dispatch(deleteWishlist(user.token, id));
+  };
 
         return (
         
-            <> 
+            <div class="wishlist">
                 <div>
                     <div className="fav-header">
-                            <h1 className="favorites">Favorites</h1>
-                            <button className="edit-button" onClick={() => {setShow(true); setEditDone(false)}}>
-                                {editDone? "Edit":"Done"}
-                            </button>
-                    </div>                                                                        
-                </div>         
-                <div class="Card">
-                        <ul>
-                        {products["results"] &&
-                            products["results"].length > 0 &&
-                            products["results"].map((product) => (
-                            <li>
-                                <div className="like">
-                                {likeUnlike ? 
-                                    <div >
-                                            {
-                                                show?<div className="like" onClick={() => setLikeUnlike(false)}>
-                                                        <img src={Like} alt="" />
-                                                    </div> :null
-                                            }
-                                    </div>
-                                    :<div className="like" onClick={() => 
-                                                                setLikeUnlike(false)}>
-                                                                <img src={Unlike} alt="" />
-                                    </div>
-                                }
-                                </div>
-                                <img src={product.main_image} />
-                                <div class="product-name">{product.name}</div>
-                                <div class="product-price">PRICE : ${product.price}</div>
-                            </li>
-                            ))}
-                        </ul>
-                
+                        <h1 className="favorites">Favorites</h1>
+                        <button
+                        className="edit-button"
+                        onClick={() => {
+                            setShow(!show);
+                            setEditDone(!editDone);
+                        }}
+                        >
+                        {editDone ? "Edit" : "Done"}
+                        </button>
+                    </div>
                 </div>
-                
-                {products["results"] && products["results"].length > 0 && (
-                <Pagination
-                    totalCount={products["count"]}
-                    previous={products["previous"]}
-                    next={products["next"]}
-                    pageSize={6}
-                    pageNumber={page}
-                />
+                <div class="Card">
+                    <ul>
+                        {wishlists["results"] &&
+                            wishlists["results"].map((wishlist) => (
+                            <li>
+                                {show && (
+                                    <div className="like" onClick={() => unLikeWishlist(wishlist.id)}>
+                                    <img src={ImgLike} alt="" />
+                                    </div>
+                                )}
+                                <img src={"https://res.cloudinary.com/techis/" + wishlist.product.main_image} />
+                                <div class="product-name">{wishlist.product.name}</div>
+                                <div class="product-price">PRICE : ${wishlist.product.price}</div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            
+                {wishlists["results"] && wishlists["results"] > 6 && (
+                    <Pagination totalCount={wishlists["count"]} previous={wishlists["previous"]} next={wishlists["next"]} pageSize={6} pageNumber={page} />
                 )}
-            </>    
+            </div>
         );
 };
-  
-export default ProductList;
 
+ export default WishList;

@@ -25,7 +25,7 @@ const Router = () => {
     <div>
       <Switch>
         <Route exact path={"/"} component={Home} />
-        <Route exact path={"/wishlist"} component={WishList} />
+        <Route exact path={"/wishlists"} component={WishList} />
         <Route exact path={"/signup"} component={SignUp} />
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />

@@ -551,26 +551,34 @@ Pagination
 
 /* =========WishList========*/
 
-.Card ul li .like{
+.wishlist{
+  padding: 5%;
+}
+
+.wishlist .Card ul li .like{
   position: absolute;
 }
-.Card ul li .like img{
+
+.wishlist .Card ul li .like img{
   width: 50px;
 }
-.Card ul li .like:hover{
+
+.wishlist .Card ul li .like:hover{
   cursor: pointer;
   width: 10%;
 }
 
-.fav-header{
+
+.wishlist .fav-header{
   display: flex;
   justify-content: space-between;
 }
-.favorites{
+
+.wishlist .favorites{
   padding: 4%;
 }
 
-.edit-button{
+.wishlist .edit-button{
   float: right;
   height: 2rem;
   width: 4rem;
@@ -578,20 +586,20 @@ Pagination
   
 }
 
-.Card ul{
+.wishlist .Card ul{
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 3% 3%;
   
 }
-.Card ul li{
+.wishlist .Card ul li{
   padding: 3%;
   margin: 3%;
   background-color: rgb(230, 230, 230);
   border-radius: 5%;
 }
-.Card ul li img{
+.wishlist .Card ul li img{
   width: 20rem;
   padding: 1%;
   margin: 3%;
@@ -599,7 +607,7 @@ Pagination
 
 
 @media screen and (max-width: 700px) {
-  .Card ul{
+  .wishlist .Card ul{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }

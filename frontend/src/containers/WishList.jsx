@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ImgLike from "../assets/img/Like.png";
+import ImgLike from "../assets/img/icon-like.svg";
 import API from "../API";
 import { useSelector, useDispatch } from "react-redux";
 import { getWishlists } from "../reducks/wishlist/selectors";
@@ -60,7 +60,10 @@ const WishList = () => {
                             wishlists["results"].map((wishlist) => (
                             <li>
                                 {show && (
-                                    <div className="like" onClick={() => unLikeWishlist(wishlist.id)}>
+                                    <div className="like" onClick={() => {
+                                                                unLikeWishlist(wishlist.id);
+                                                                window.location.reload()       
+                                                          }}>
                                     <img src={ImgLike} alt="" />
                                     </div>
                                 )}
@@ -71,10 +74,11 @@ const WishList = () => {
                         ))}
                     </ul>
                 </div>
-            
+                
                 {wishlists["results"] && wishlists["results"] > 6 && (
                     <Pagination totalCount={wishlists["count"]} previous={wishlists["previous"]} next={wishlists["next"]} pageSize={6} pageNumber={page} />
                 )}
+               
             </div>
         );
 };

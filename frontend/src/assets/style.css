@@ -554,8 +554,8 @@ Cart List
 ************************************/
 
 .cart-list {
-  width: 80%;
-  margin: 20px auto;
+  width: 70%;
+  margin: 1.2rem 10rem;
 }
 
 .cart-list .content {
@@ -566,20 +566,20 @@ Cart List
 }
 
 .cart-list .content .product-list {
-  width: 60%;
+  width: 70%;
   margin: 0;
-  padding: 20px 20px;
+  padding: 1.4rem 1rem;
   background-color: #efecec;
 }
-
-/* .cart-list .content .product-list .product .bottom {
-  padding-top: 30px;
-} */
 
 .cart-list .content .product-list .price {
   font-size: 30px;
   font-weight: 600;
   font-family: inherit;
+}
+
+.product-list .product-info .name {
+  padding-bottom: 6rem;
 }
 
 .product-list label {
@@ -683,7 +683,7 @@ select {
   position: relative;
   width: 25%;
   margin: 0 20px;
-  padding: 50px 50px;
+  padding: 3rem 3rem;
   height: min-content;
   background-color: #efecec;
 }

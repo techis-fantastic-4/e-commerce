@@ -20,7 +20,7 @@ const Cart = () => {
     <div class="cart-list">
       <h2>SHOPPING CART</h2>
       <div class="content">
-        <ul class="product-list">
+        <div class="product-list">
           <div class="product">
             <img src="https://res.cloudinary.com/techis/image/upload/v1626895865/f8tmpqyozntqng0uzt9d.png" alt="" />
             <div class="product-info">
@@ -44,9 +44,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </ul>
-        <hr />
-        {/* <section class="product-list">
+          <hr/>
           <div class="product">
             <img src="https://res.cloudinary.com/techis/image/upload/v1626895865/f8tmpqyozntqng0uzt9d.png" alt="" />
             <div class="product-info">
@@ -64,13 +62,14 @@ const Cart = () => {
                     <option value='6'>6</option>
                   </select>
                   <div class="trash">
-                    <img src={ImgIconTrash} alt="" />
+                    <img src={ImgIconTrash} className='trashicon' alt="" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section> */}
+        </div>
+        <hr />
         <section class="checkout-area">
           <div class='cartinfo-total'>
             <h4 class='heading'>SUBTOTAL</h4>

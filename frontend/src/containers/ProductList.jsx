@@ -9,24 +9,31 @@ import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
+import SearchByCategory from "../components/common/ProductSearchByCategory";
+
 import queryString from "query-string";
 
 const api = new API();
 const ProductList = () => {
   const parsed = queryString.parse(window.location.search);
   const [page, setPage] = useState(1);
+  const [category_name, setCategoryName] = useState(null);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
 
   useEffect(() => {
-    if (parsed.page == undefined) {
-      dispatch(fetchProducts(1));
-    } else {
+    if (parsed.page != undefined) {
       setPage(parsed.page);
-      dispatch(fetchProducts(parsed.page));
+    }
+    if (parsed.category_name != undefined) {
+      setCategoryName(parsed.category_name);
     }
   }, []);
+
+  useEffect(() => {
+    dispatch(fetchProducts(page, category_name));
+  }, [page, category_name]);
 
   return (
     <div class="product-list">
@@ -35,25 +42,31 @@ const ProductList = () => {
           <h3>Category Lists</h3>
           <ul>
             <li>
-              <a class="active" href="">
+              <a href="/products/?category_name=phone">
                 Phone <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=camera">
                 Camera
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=laptop">
                 Laptop
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/products/?category_name=watch">
                 Wearables
+                <img src={ImgArrowDown} class="" />
+              </a>
+            </li>
+            <li>
+              <a href="/products/?category_name=play_station">
+                Play Station
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
@@ -75,6 +88,7 @@ const ProductList = () => {
       </div>
       {products["results"] && products["results"].length > 0 && (
         <Pagination
+          key={1}
           totalCount={products["count"]}
           previous={products["previous"]}
           next={products["next"]}

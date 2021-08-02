@@ -8,7 +8,7 @@
 -- -------------------------------------------------------------
 
 -- How to import on your local
--- > db.sqlite3
+-- > sqlite3 db.sqlite3
 -- > .read sql/20210723_product.sql
 
 INSERT INTO "product" ("status", "name", "description", "main_image", "sku", "quantity", "price", "discount_price", "created_at", "updated_at", "category_name") VALUES

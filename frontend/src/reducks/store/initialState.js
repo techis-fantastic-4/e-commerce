@@ -5,6 +5,9 @@ const initialState = {
     products: {
         
     },
+    wishlists:{
+        
+    },
     user: {
         user_name: "",
         email: "",

@@ -37,6 +37,9 @@ const Header = () => {
             <li class="nav-item">
               <a href="/products">Products</a>
             </li>
+            <li class="nav-item">
+              <a href="/wishlists">Wishlist</a>
+            </li>
             {user.token ? (
               <li class="nav-item">
                 <a href="/signout">Sign Out</a>

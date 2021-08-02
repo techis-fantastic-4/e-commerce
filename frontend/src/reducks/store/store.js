@@ -10,15 +10,17 @@ import thunk from 'redux-thunk';
 import {PostsReducer} from '../posts/reducers';
 import {UserReducer} from '../user/reducers';
 import {ProductsReducer} from '../products/reducers';
+import {WishlistsReducer} from '../wishlist/reducers';
 
 export default function createStore(history) {
     return reduxCreateStore(
         combineReducers({
             router: connectRouter(history),
-            posts: PostsReducer,
+            wishlists: WishlistsReducer,
+            posts: PostsReducer,           
             user: UserReducer,
-            products: ProductsReducer,
-       }),
+            products: ProductsReducer,            
+        }),
        compose(
         applyMiddleware(
             routerMiddleware(history),

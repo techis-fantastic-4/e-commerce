@@ -123,4 +123,46 @@ export default class API {
             })
         return products
     }
+
+
+    /////////////////////////
+    ///// Wishlist 
+    ////////////////////////
+
+    getWishlist = async (token, page) => {
+
+        const wishlist = await api
+            .get("/wishlists/?page"+ page, {               
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return wishlist
+    }
+
+    
+
+    deleteWishlist = async (token, id) => {
+        const response = await api
+            .delete("/wishlists/delete/" + id + "/", {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return response
+    }
 }

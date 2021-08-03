@@ -113,6 +113,9 @@ export default class API {
         if (category_name) {
             url += '&category_name=' + category_name;
         }
+        if (category_name) {
+            url += '&search=' + category_name;
+        }
         const products = await api
             .get(url)
             .then((response) => {

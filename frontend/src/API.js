@@ -111,10 +111,10 @@ export default class API {
     getProducts = async (page, category_name) => {
         let url = "/products/?page=" + page;
         if (category_name) {
-            url += '&category_name=' + category_name;
+            url += '&search=' + category_name;
         }
         if (category_name) {
-            url += '&search=' + category_name;
+            url += '&category_name=' + category_name;
         }
         const products = await api
             .get(url)

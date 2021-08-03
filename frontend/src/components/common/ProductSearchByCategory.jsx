@@ -15,6 +15,10 @@ const SearchByCategory = ({ categories }) => {
               to={`/products?category_name=${category.slug}`}
               className="sidebar-links__link"
             >
+              <div
+                to={`/products?search=${category.slug}`}
+                className="sidebar-links__link"
+              ></div>
               {category.name}
             </div>
           </li>

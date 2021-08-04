@@ -302,6 +302,7 @@ Home
   #details-label {
     margin: auto;
     text-align: center;
+    padding-top: 1rem;
   }
   #details-description-text {
     width: 100%;
@@ -326,9 +327,11 @@ Home
   }
   #details-desc {
     margin-left: 0;
+    padding: 1rem;
   }
   #details-description-text {
     margin-left: 0;
+    padding: 1rem;
   }
   header {
     width: 100%;
@@ -336,6 +339,7 @@ Home
   #break,
   #break2 {
     margin-left: 0;
+    width: 100%;
   }
 }
 

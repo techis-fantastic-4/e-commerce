@@ -295,6 +295,11 @@ Home
 }
 
 /* Product details */
+@media screen and (max-width: 500px) {
+  .product-details {
+    width: 100%;
+  }
+}
 
 .product-details .details-label {
   margin: 5rem 0 0 10rem;

@@ -32,18 +32,23 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className="product-details">
+        <div class="product-details">
             <section className="product">
                 <div className="details-card">
-                    <h1 className="details-label">Item Details</h1>
+                    <h1 className="details-label" id="details-label">Item Details</h1>
                     <div className="details-container">
                         <div className="product-image-div">
                             {product && (
-                                <img src={product.results[0].main_image} alt="product" className="details-img" />
+                                <img src={product.results[0].main_image} alt="product" className="details-image" id="details-image" />
                             )}
                         </div>
-                        
-                        <div className="text-area details-box">
+                        <p className="details-name-1" id="details-name-1">
+                        {product && (
+                            <strong>{product.results[0].name}</strong>
+                        )}
+
+                        </p>                        
+                        <div id="details-box" className="details-box">
                             {product && (
                                 <div className="product-price">PRICE : {product.results[0].price}</div>
                             )}
@@ -66,24 +71,24 @@ const ProductDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="details-name">
+                    <p className="details-name" id="details-name-2">
                         {product && (
                             <strong>{product.results[0].name}</strong>
                         )}
 
                     </p>
                 </div>
-                <hr />
-                <p className="details-desc">
+                <hr id="break" />
+                <p className="details-desc" id="details-desc">
                     Item Details:
                 </p>
-                <p className="details-desc">
+                <p className="details-desc" id="details-description-text">
                     {product && (
                         <div>{product.results[0].description}</div>
                     )}
 
                 </p>
-                <hr style={{ marginBottom: "5rem" }}/>
+                <hr id="break2" style={{ marginBottom: "5rem" }}/>
 
             </section>
 

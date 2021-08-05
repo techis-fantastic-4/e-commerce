@@ -61,8 +61,8 @@ const WishList = () => {
                             <li>
                                 {show && (
                                     <div className="like" onClick={() => {
-                                                                unLikeWishlist(wishlist.id);
-                                                                window.location.reload()       
+                                                              unLikeWishlist(wishlist.id);
+                                                              window.location.reload(); 
                                                           }}>
                                     <img src={ImgLike} alt="" />
                                     </div>
@@ -75,7 +75,7 @@ const WishList = () => {
                     </ul>
                 </div>
                 
-                {wishlists["results"] && wishlists["results"] > 6 && (
+                {wishlists["results"] && wishlists["results"].length > 0 && (
                     <Pagination totalCount={wishlists["count"]} previous={wishlists["previous"]} next={wishlists["next"]} pageSize={6} pageNumber={page} />
                 )}
                

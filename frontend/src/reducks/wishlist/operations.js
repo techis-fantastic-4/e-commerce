@@ -2,7 +2,7 @@ import { push } from "connected-react-router";
 import API from "../../API";
 import {
   fetchWishlistsAction,
-  addwiWshlistAction,
+  addWishlistAction,
   deleteWishlistAction,
 } from "./actions";
 
@@ -16,6 +16,22 @@ export const fetchWishlists = (token, page) => {
       })
       .catch((error) => {
         alert("Failed to connect API: /wishlists/");
+      });
+  };
+};
+
+export const addWishlist = (token, id) => {
+  return async (dispatch, getState) => {
+    return api
+      .addWishlist(token, id)
+      .then((wishlist) => {
+        const prevWishlists = getState().wishlists.results
+        const nextWishlists = [wishlist, ...prevWishlists]
+        dispatch(addWishlistAction(nextWishlists));
+      })
+      .catch((error) => {
+        alert("Failed to connect API to add a wishlist");
+        console.log(error);
       });
   };
 };

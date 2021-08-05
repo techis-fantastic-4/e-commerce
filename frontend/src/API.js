@@ -149,6 +149,24 @@ export default class API {
 
     
 
+    addWishlist = async (token, id) => {
+        const response = await api
+            .post("/wishlists/add/" + id, {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return response
+    }
+
+
     deleteWishlist = async (token, id) => {
         const response = await api
             .delete("/wishlists/delete/" + id + "/", {

@@ -370,6 +370,17 @@ Product List
   font-weight: bold;
 }
 
+.product-list ul li .like {
+  width: 50px;
+  position: absolute;
+  transition: 0.5s ease-out;
+}
+
+.product-list ul li .like:hover{
+  cursor: pointer;
+  width: 55px;
+}
+
 .product-list .sidebar li a img {
   position: absolute;
   right: 0px;
@@ -387,7 +398,10 @@ Product List
 }
 
 .product-list .main ul {
-  padding: 3px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 3% 3%;
 }
 
 .product-list .main ul::after {
@@ -399,7 +413,6 @@ Product List
 .product-list .main li {
   float: left;
   list-style: none;
-  width: 30%;
   margin: 10px;
   background-color: #eaeaea;
   text-align: center;
@@ -409,6 +422,7 @@ Product List
 
 .product-list .main li:hover {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .product-list .main li img {
@@ -431,6 +445,10 @@ Product List
 .product-list .main li .product-price {
   font-size: 22px;
   text-decoration: underline;
+}
+
+.product-list .main .button .edit-button{
+  float: right;
 }
 
 @media screen and (max-width: 700px) {

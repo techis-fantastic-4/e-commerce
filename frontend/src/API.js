@@ -124,11 +124,13 @@ export default class API {
         return products
     }
 
+    /////////////////////////
+    // Cart
+    /////////////////////////
 
     /////////////////////////
-    ///// Wishlist 
+    /// Wishlist 
     ////////////////////////
-
     getWishlist = async (token, page) => {
 
         const wishlist = await api
@@ -146,8 +148,6 @@ export default class API {
             })
         return wishlist
     }
-
-    
 
     deleteWishlist = async (token, id) => {
         const response = await api

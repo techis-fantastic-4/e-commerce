@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import reportWebVitals from './reportWebVitals';
 import * as History from 'history';
+import 'font-awesome/css/font-awesome.min.css'
 
 const history = History.createBrowserHistory();
 export const store = createStore(history);

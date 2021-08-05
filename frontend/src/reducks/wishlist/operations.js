@@ -24,9 +24,9 @@ export const addWishlist = (token, id) => {
   return async (dispatch, getState) => {
     return api
       .addWishlist(token, id)
-      .then((wishlist) => {
-        const prevWishlists = getState().wishlists.results
-        const nextWishlists = [wishlist, ...prevWishlists]
+      .then((product) => {
+        const prevWishlists = getState().wishlists.list
+        const nextWishlists = [product, ...prevWishlists]
         dispatch(addWishlistAction(nextWishlists));
       })
       .catch((error) => {

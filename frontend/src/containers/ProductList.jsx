@@ -104,7 +104,7 @@ const ProductList = () => {
                         <div className="like" onClick={() => {
                                                     LikeWishlist(product.id);
                                                            
-                                                      }}>
+                                              }}>
                             <img src={ImgLike} alt="" />
                         </div>
                     )}

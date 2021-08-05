@@ -12,7 +12,7 @@ import ImgProductMac from "../assets/img/product-mac.jpg";
 import ImgProductPhone from "../assets/img/product-phone.jpg";
 import ImgProductPods from "../assets/img/product-pods.jpg";
 
-const Home = () => {
+const Home = () => {  
   return (
     <div class="home">
       <section class="main">

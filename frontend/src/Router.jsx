@@ -10,6 +10,7 @@ import UserList from "./containers/UserList";
 import Cart from "./containers/Cart";
 import { getUser } from "./reducks/user/selectors";
 import { fetchUserFromLocalStorage } from "./reducks/user/operations";
+import WishList from "./containers/WishList";
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const Router = () => {
     <div>
       <Switch>
         <Route exact path={"/"} component={Home} />
+        <Route exact path={"/wishlists"} component={WishList} />
         <Route exact path={"/signup"} component={SignUp} />
         <Route exact path={"/signin"} component={SignIn} />
         <Route exact path={"/signout"} component={SignOut} />

@@ -18,6 +18,7 @@ const ProductList = () => {
   const parsed = queryString.parse(window.location.search);
   const [page, setPage] = useState(1);
   const [category_name, setCategoryName] = useState(null);
+  const [search, setSearch] = useState(null);
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
@@ -29,11 +30,14 @@ const ProductList = () => {
     if (parsed.category_name != undefined) {
       setCategoryName(parsed.category_name);
     }
+    if (parsed.search != undefined) {
+      setSearch(parsed.search);
+    }
   }, []);
 
   useEffect(() => {
-    dispatch(fetchProducts(page, category_name));
-  }, [page, category_name]);
+    dispatch(fetchProducts(page, category_name, search));
+  }, [page, category_name, search]);
 
   return (
     <div class="product-list">

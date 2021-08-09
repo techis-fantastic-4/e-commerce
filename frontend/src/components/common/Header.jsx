@@ -5,9 +5,12 @@ import ImageIconSearch from "../../assets/img/icon-search.svg";
 import { useSelector } from "react-redux";
 import { getUser } from "../../reducks/user/selectors";
 
+import queryString from "query-string";
+
 const Header = () => {
   const selector = useSelector((state) => state);
   const user = getUser(selector);
+  const parsed = queryString.parse(window.location.search);
 
   return (
     <header>
@@ -57,7 +60,10 @@ const Header = () => {
           </ul>
         </div>
         <img src={ImageIconCart} class="icon-cart" />
-        <img src={ImageIconSearch} class="icon-search" />
+        <form action="/products" method="get">
+          <input type="text" name="search" id="" />
+          <img src={ImageIconSearch} class="icon-search" />
+        </form>
       </nav>
     </header>
   );

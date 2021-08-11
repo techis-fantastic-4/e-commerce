@@ -20,14 +20,12 @@ export const fetchWishlists = (token, page) => {
   };
 };
 
-export const addWishlist = (token, id) => {
+export const addWishlist = (token, productId) => {
   return async (dispatch, getState) => {
     return api
-      .addWishlist(token, id)
-      .then((product) => {
-        const prevWishlists = getState().wishlists.list
-        const nextWishlists = [product, ...prevWishlists]
-        dispatch(addWishlistAction(nextWishlists));
+      .addWishlist(token, productId)
+      .then((wishlist) => {
+        console.log('Added wishlist');
       })
       .catch((error) => {
         alert("Failed to connect API to add a wishlist");

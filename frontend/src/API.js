@@ -132,7 +132,7 @@ export default class API {
     getWishlist = async (token, page) => {
 
         const wishlist = await api
-            .get("/wishlists/?page"+ page, {               
+            .get("/wishlists/?page=" + page, {               
                 data: {},
                 headers: {
                     "Authorization": token,
@@ -147,15 +147,15 @@ export default class API {
         return wishlist
     }
 
-    
-
-    addWishlist = async (token, id) => {
+    addWishlist = async (token, productId) => {
+        const data = {"product": productId}
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': token
+          }
         const response = await api
-            .post("/wishlists/add/" + id, {
-                data: {},
-                headers: {
-                    "Authorization": token,
-                }
+            .post("/wishlists/add/", data, {
+                headers: headers
             })
             .then((response) => {
                 return response.data
@@ -165,7 +165,6 @@ export default class API {
             })
         return response
     }
-
 
     deleteWishlist = async (token, id) => {
         const response = await api

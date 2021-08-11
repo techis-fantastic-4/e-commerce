@@ -41,8 +41,8 @@ const ProductList = () => {
     dispatch(fetchProducts(page, category_name));
   }, [page, category_name]);
 
-  const LikeWishlist = (id) => {
-    dispatch(addWishlist(user.token, id + "/"));
+  const likeWishlist = (productId) => {
+    dispatch(addWishlist(user.token, productId));
   };
 
   return (
@@ -104,7 +104,7 @@ const ProductList = () => {
                     <div
                       className="like"
                       onClick={() => {
-                        LikeWishlist(product.id);
+                        likeWishlist(product.id);
                       }}
                     >
                       <img src={ImgLike} alt="" />

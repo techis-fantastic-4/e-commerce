@@ -42,7 +42,7 @@ const ProductList = () => {
   }, [page, category_name]);
 
   const LikeWishlist = (id) => {
-    dispatch(addWishlist(user.token, id));
+    dispatch(addWishlist(user.token, id + "/"));
   };
 
   return (
@@ -82,32 +82,34 @@ const ProductList = () => {
             </li>
           </ul>
         </div>
-        
+
         <div class="main">
-          <div className="button">         
-              <button
-                  className="edit-button"
-                  onClick={() => {
-                      setShow(!show);
-                      setEditDone(!editDone);
-                  }}
-                  >
-                  {editDone ? "Edit" : "Done"}
-              </button>
-          </div>            
+          <div className="button">
+            <button
+              className="edit-button"
+              onClick={() => {
+                setShow(!show);
+                setEditDone(!editDone);
+              }}
+            >
+              {editDone ? "Edit" : "Done"}
+            </button>
+          </div>
           <ul>
             {products["results"] &&
               products["results"].length > 0 &&
               products["results"].map((product) => (
                 <li>
                   {show && (
-                        <div className="like" onClick={() => {
-                                                    LikeWishlist(product.id);
-                                                           
-                                              }}>
-                            <img src={ImgLike} alt="" />
-                        </div>
-                    )}
+                    <div
+                      className="like"
+                      onClick={() => {
+                        LikeWishlist(product.id);
+                      }}
+                    >
+                      <img src={ImgLike} alt="" />
+                    </div>
+                  )}
                   <img src={product.main_image} />
                   <div class="product-name">{product.name}</div>
                   <div class="product-price">PRICE : ${product.price}</div>

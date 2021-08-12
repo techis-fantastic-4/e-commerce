@@ -37,32 +37,32 @@ const Home = () => {
         <h2>CATEGORIES</h2>
         <ul>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=phone">
               <img src={ImgCategoryPhone} class="" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=camera">
               <img src={ImgCategoryCamera} class="" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=laptop">
               <img src={ImgCategoryLaptop} class="" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=play_station">
               <img src={ImgCategoryPlaystation} class="" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=watch">
               <img src={ImgCategoryWatch} class="" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="/products/?category_name=pods">
               <img src={ImgCategoryPods} class="" />
             </a>
           </li>

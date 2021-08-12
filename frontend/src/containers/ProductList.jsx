@@ -83,6 +83,12 @@ const ProductList = () => {
                 <img src={ImgArrowDown} class="" />
               </a>
             </li>
+            <li>
+              <a href="/products/?category_name=pods">
+                Pods
+                <img src={ImgArrowDown} class="" />
+              </a>
+            </li>
           </ul>
         </div>
 

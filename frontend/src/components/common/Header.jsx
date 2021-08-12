@@ -61,8 +61,8 @@ const Header = () => {
         </div>
         <img src={ImageIconCart} class="icon-cart" />
         <form action="/products" method="get">
-          <input type="text" name="search" id="" />
-          <img src={ImageIconSearch} class="icon-search" />
+          <input type="text" placeholder="Search Product" name="search" id="" style={{borderRadius: 20 + 'px',textAlign:"center"}}/>
+          {/* <img src={ImageIconSearch} class="icon-search" /> */}
         </form>
       </nav>
     </header>

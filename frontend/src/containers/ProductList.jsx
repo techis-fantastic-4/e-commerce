@@ -10,7 +10,6 @@ import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
-import SearchByCategory from "../components/common/ProductSearchByCategory";
 import { addWishlist } from "../reducks/wishlist/operations";
 import { getUser } from "../reducks/user/selectors";
 

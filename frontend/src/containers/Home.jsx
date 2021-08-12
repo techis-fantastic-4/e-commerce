@@ -34,7 +34,7 @@ const Home = () => {
       </section>
 
       <section class="category">
-        <h2>CATEGORIS</h2>
+        <h2>CATEGORIES</h2>
         <ul>
           <li>
             <a href="/">

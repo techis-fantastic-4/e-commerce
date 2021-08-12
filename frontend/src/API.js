@@ -108,8 +108,11 @@ export default class API {
     /////////////////////////
     // Products
     /////////////////////////
-    getProducts = async (page, category_name) => {
+    getProducts = async (page, category_name, search) => {
         let url = "/products/?page=" + page;
+        if (search) {
+            url += '&search=' + search;
+        }
         if (category_name) {
             url += '&category_name=' + category_name;
         }

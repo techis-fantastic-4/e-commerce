@@ -1,5 +1,9 @@
 # To use the http client, install "REST Client" extension of Visual Studio Code.
 # To send the request and get the result, click the 'Send Request' 
-GET http://127.0.0.1:8000/wishlists/ HTTP/1.1
+GET http://127.0.0.1:8000/wishlists/add/10 HTTP/1.1
 content-type: application/json
 Authorization: c8e01fad2ffeff13c51700fd0d74b26be3be423107817e6fe986638c1ff5
+
+{
+    "product": 7
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../assets/img/loading.gif";
+import ImgLike from "../assets/img/icon-like.svg";
 import API from "../API";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../reducks/products/selectors";
@@ -9,6 +10,9 @@ import ImgArrowRight from "../assets/img/icon-arrow-right.svg";
 import ImgSampleProduct from "../assets/img/sample-product.png";
 import Pagination from "../components/common/Pagination.jsx";
 import { fetchProducts } from "../reducks/products/operations";
+import SearchByCategory from "../components/common/ProductSearchByCategory";
+import { addWishlist } from "../reducks/wishlist/operations";
+import { getUser } from "../reducks/user/selectors";
 
 import queryString from "query-string";
 
@@ -21,6 +25,9 @@ const ProductList = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
+  const [show, setShow] = useState(false);
+  const [editDone, setEditDone] = useState(true);
+  const user = getUser(selector);
 
   useEffect(() => {
     if (parsed.page != undefined) {
@@ -37,6 +44,10 @@ const ProductList = () => {
   useEffect(() => {
     dispatch(fetchProducts(page, category_name, search));
   }, [page, category_name, search]);
+
+  const likeWishlist = (productId) => {
+    dispatch(addWishlist(user.token, productId));
+  };
 
   return (
     <div class="product-list">
@@ -75,12 +86,34 @@ const ProductList = () => {
             </li>
           </ul>
         </div>
+
         <div class="main">
+          <div className="button">
+            <button
+              className="edit-button"
+              onClick={() => {
+                setShow(!show);
+                setEditDone(!editDone);
+              }}
+            >
+              {editDone ? "Edit" : "Done"}
+            </button>
+          </div>
           <ul>
             {products["results"] &&
               products["results"].length > 0 &&
               products["results"].map((product) => (
                 <li>
+                  {show && (
+                    <div
+                      className="like"
+                      onClick={() => {
+                        likeWishlist(product.id);
+                      }}
+                    >
+                      <img src={ImgLike} alt="" />
+                    </div>
+                  )}
                   <img src={product.main_image} />
                   <div class="product-name">{product.name}</div>
                   <div class="product-price">PRICE : ${product.price}</div>

@@ -123,7 +123,18 @@ export default class API {
             })
         return products
     }
-
+    getProduct = async (id) => {
+        const product = await api
+            .get("/products/" + id + "/")
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return product
+    }
+    
     /////////////////////////
     // Cart
     /////////////////////////

@@ -44,8 +44,9 @@ header nav {
 }
 
 header nav .logo {
-  width: 120px;
+  width: 12rem;
   padding-right: 50px;
+  margin-right: 12rem;
 }
 
 header nav a {
@@ -54,7 +55,7 @@ header nav a {
 }
 
 header nav li {
-  padding-right: 30px;
+  padding-right: 6rem;
 }
 
 header nav .navbar-brand {
@@ -292,6 +293,111 @@ Home
   }
 }
 
+/* Product details */
+@media screen and (max-width: 500px) {
+  .product-details {
+    width: 100%;
+  }
+  #details-label {
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  #details-description-text {
+    width: 100%;
+  }
+  .product-image-div {
+    width: 100%;
+  }
+  #details-image {
+    width: 100%;
+    margin: 0 5px 0 5px;
+  }
+  #details-box {
+    margin-left: 0;
+    width: 100%;
+  }
+  #details-name-1 {
+    display: block;
+    text-align: center;
+  }
+  #details-name-2 {
+    display: none;
+  }
+  #details-desc {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  #details-description-text {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  header {
+    width: 100%;
+  }
+  #break,
+  #break2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.product-details .details-label {
+  margin: 5rem 0 0 10rem;
+}
+.product-details .product-image-div {
+  display: inline-block;
+}
+.details-image {
+  width: 30rem;
+  margin-left: 20rem;
+  display: inline-block;
+}
+
+.product-details .details-name {
+  font-size: x-large;
+  margin-left: 10rem;
+  display: flex;
+}
+
+.product-details .details-name-1 {
+  display: none;
+}
+
+.product-details .details-box {
+  display: inline-block;
+  margin-left: 15rem;
+  background-color: #efecec;
+  padding: 1rem;
+  width: 20rem;
+  font-size: large;
+}
+
+.product-details .product-price {
+  margin-bottom: 0.8rem;
+}
+
+.product-details .product-status {
+  margin-bottom: 0.8rem;
+}
+.product-details hr {
+  width: 50rem;
+  margin-left: 10rem;
+}
+.product-details .form-control {
+  width: 4rem;
+}
+.product-details .custom-select {
+  background-color: #fae706;
+}
+
+#add-cart-btn {
+  width: 100%;
+}
+.product-details .details-desc {
+  margin-left: 10rem;
+  width: 100%;
+}
 /*
 form
 ************************************/

@@ -8,7 +8,7 @@ const LOGIN_USER_KEY = "LOGIN_USER_KEY";
 export const fetchUserFromLocalStorage = () => {
     return async (dispatch) => {
 		const userJSON = localStorage.getItem(LOGIN_USER_KEY);	
-		if (userJSON && userJSON.token != "") {
+		if (userJSON && userJSON.token !== "") {
 			dispatch(signInAction(JSON.parse(userJSON)))
 		}
 	}

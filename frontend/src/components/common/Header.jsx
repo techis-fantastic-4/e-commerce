@@ -32,10 +32,6 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a href="/">Item Lists</a>
               <a href="/products">Products</a>
             </li>
             <li class="nav-item">

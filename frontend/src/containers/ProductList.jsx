@@ -77,7 +77,7 @@ const ProductList = () => {
             {products["results"] &&
               products["results"].length > 0 &&
               products["results"].map((product) => (
-                <li>
+                <li onClick={() => dispatch(push("/products/" + product.id + "/"))}>
                   <img src={product.main_image} />
                   <div class="product-name">{product.name}</div>
                   <div class="product-price">PRICE : ${product.price}</div>
@@ -87,14 +87,7 @@ const ProductList = () => {
         </div>
       </div>
       {products["results"] && products["results"].length > 0 && (
-        <Pagination
-          key={1}
-          totalCount={products["count"]}
-          previous={products["previous"]}
-          next={products["next"]}
-          pageSize={6}
-          pageNumber={page}
-        />
+        <Pagination key={1} totalCount={products["count"]} previous={products["previous"]} next={products["next"]} pageSize={6} pageNumber={page} />
       )}
     </div>
   );

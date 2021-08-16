@@ -8,8 +8,8 @@ const api = new API();
 
 const ProductDetails = () => {
     const dispatch = useDispatch();
-    const [product, setProduct] = useState([]);
-    
+    const [product, setProduct] = useState(null);
+
     let id = window.location.pathname.split("/products")[1];
     if (id !== "") {
         id = id.split("/")[1];
@@ -17,54 +17,78 @@ const ProductDetails = () => {
 
     useEffect(() => {
         api.getProduct(id).then((product) => {
-          setProduct(product);
+            setProduct(product);
+            console.log(product.results[0]);
         });
-      }, [product]);
+    }, []);
 
-    
-    console.log(product.results);
+
+
+    let status = "";
+    if (product && product.results[0].quantity > 0) {
+        status = "In Stock";
+    } else {
+        status = "Out of Stock"
+    }
+
     return (
-        <div className="product-details">
+        <div class="product-details">
             <section className="product">
                 <div className="details-card">
-                    <h1 className="details-label">Item Details</h1>
-                    <img src={ImgProductCamera} alt="product" class="details-img" />    
-                        {/* this.state.product.image */}
-                    <div class="text-area details-box">
-                        <div class="product-price">PRICE : $929.99</div>
-                            {/* this.state.product.price */}
-                        <div class="product-status">STATUS : Status</div>
-                            {/* this.state.product.status */}
-                        <div class="form-group" style={{marginBottom: "1rem"}}>
-                            <label for="exampleFormControlSelect1">QUANTITY : </label>
-                            <select class="form-control"  style={{backgroundColor: "#FAE706"}} id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                    <h1 className="details-label" id="details-label">Item Details</h1>
+                    <div className="details-container">
+                        <div className="product-image-div">
+                            {product && (
+                                <img src={product.results[0].main_image} alt="product" className="details-image" id="details-image" />
+                            )}
                         </div>
-                        <div class="cta-area">
-                            <a class="btn btn-primary" href="   /">
-                                Add to Cart
-                            </a>
+                        <p className="details-name-1" id="details-name-1">
+                        {product && (
+                            <strong>{product.results[0].name}</strong>
+                        )}
+
+                        </p>                        
+                        <div id="details-box" className="details-box">
+                            {product && (
+                                <div className="product-price">PRICE : {product.results[0].price}</div>
+                            )}
+                            {product && (
+                                <div className="product-status">STATUS : {status}</div>
+                            )}
+                            <div className="form-group" style={{ marginBottom: "1rem" }}>
+                                <select className="custom-select">
+                                    <option>Qty 1</option>
+                                    <option>Qty 2</option>
+                                    <option>Qty 3</option>
+                                    <option>Qty 4</option>
+                                    <option>Qty 5</option>
+                                </select>
+                            </div>
+                            <div className="cta-area">
+                                <a className="btn btn-primary" id="add-cart-btn" href="   /">
+                                    Add to Cart
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <p class="details-name">
-                        NAME OF PRODUCT GOES HERE!
-                        {/* this.state.product.name */}
+                    <p className="details-name" id="details-name-2">
+                        {product && (
+                            <strong>{product.results[0].name}</strong>
+                        )}
+
                     </p>
                 </div>
-                <hr />
-                    <p class="details-desc">
-                        Item Details:
-                    </p>
-                    <p class="details-desc">
-                        Here is where there will be a lot more details related to the product.
-                        {/* this.state.product.desc */}
-                    </p>
-                <hr />
+                <hr id="break" />
+                <p className="details-desc" id="details-desc">
+                    Item Details:
+                </p>
+                <p className="details-desc" id="details-description-text">
+                    {product && (
+                        <div>{product.results[0].description}</div>
+                    )}
+
+                </p>
+                <hr id="break2" style={{ marginBottom: "5rem" }}/>
 
             </section>
 

@@ -1,8 +1,9 @@
 from django.db import models
-from apps.products.models import Product 
-from apps.users.models import User 
+from apps.products.models import Product
+from apps.users.models import User
 
 # Create your models here.
+
 
 class Wishlist(models.Model):
     class Meta(object):

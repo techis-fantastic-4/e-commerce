@@ -363,10 +363,11 @@ Home
 .product-details .details-name-1 {
   display: none;
 }
-.details-box {
+
+.product-details .details-box {
   display: inline-block;
   margin-left: 15rem;
-  background-color: lightgrey;
+  background-color: #efecec;
   padding: 1rem;
   width: 20rem;
   font-size: large;
@@ -395,8 +396,7 @@ Home
 }
 .product-details .details-desc {
   margin-left: 10rem;
-  margin-bottom: 3rem;
-  width: 50rem;
+  width: 100%;
 }
 /*
 form

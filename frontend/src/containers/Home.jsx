@@ -12,7 +12,7 @@ import ImgProductMac from "../assets/img/product-mac.jpg";
 import ImgProductPhone from "../assets/img/product-phone.jpg";
 import ImgProductPods from "../assets/img/product-pods.jpg";
 
-const Home = () => {  
+const Home = () => {
   return (
     <div class="home">
       <section class="main">
@@ -23,11 +23,8 @@ const Home = () => {
           <div class="product-name">EOS 80D DSLR</div>
           <div class="product-price">$929.99</div>
           <div class="cta-area">
-            <a class="btn btn-primary" href="/">
-              Add to Cart
-            </a>
-            <a class="learn-more" href="/">
-              Learn More &gt;
+            <a class="btn btn-primary" href="/products/8/">
+              Learn More
             </a>
           </div>
         </div>
@@ -71,15 +68,12 @@ const Home = () => {
 
       <section class="product">
         <div class="text-area">
-          <div class="title">Canon</div>
+          <div class="title">One Plus</div>
           <div class="product-name">EOS 80D DSLR</div>
           <div class="product-price">$929.99</div>
           <div class="cta-area">
-            <a class="btn btn-primary" href="/">
-              Add to Cart
-            </a>
-            <a class="learn-more" href="/">
-              Learn More &gt;
+            <a class="btn btn-primary" href="/products/24/">
+              Learn More
             </a>
           </div>
         </div>
@@ -94,11 +88,8 @@ const Home = () => {
           <div class="product-name">EOS 80D DSLR</div>
           <div class="product-price">$929.99</div>
           <div class="cta-area">
-            <a class="btn btn-primary" href="/">
-              Add to Cart
-            </a>
-            <a class="learn-more" href="/">
-              Learn More &gt;
+            <a class="btn btn-primary" href="/products/8/">
+              Learn More
             </a>
           </div>
         </div>
@@ -107,15 +98,12 @@ const Home = () => {
 
       <section class="product">
         <div class="text-area">
-          <div class="title">Canon</div>
+          <div class="title">Laptop</div>
           <div class="product-name">EOS 80D DSLR</div>
           <div class="product-price">$929.99</div>
           <div class="cta-area">
-            <a class="btn btn-primary" href="/">
-              Add to Cart
-            </a>
-            <a class="learn-more" href="/">
-              Learn More &gt;
+            <a class="btn btn-primary" href="/products/6/">
+              Learn More
             </a>
           </div>
         </div>
@@ -130,11 +118,8 @@ const Home = () => {
           <div class="product-name">EOS 80D DSLR</div>
           <div class="product-price">$929.99</div>
           <div class="cta-area">
-            <a class="btn btn-primary" href="/">
-              Add to Cart
-            </a>
-            <a class="learn-more" href="/">
-              Learn More &gt;
+            <a class="btn btn-primary" href="/products/35/">
+              Learn More
             </a>
           </div>
         </div>

@@ -396,7 +396,7 @@ Home
 .product-details .details-desc {
   margin-left: 10rem;
   margin-bottom: 3rem;
-  width: 50rem;
+  width: 100%;
 }
 /*
 form
@@ -744,16 +744,35 @@ Cart List
   display: flex;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .quantity {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .quantity {
   padding-right: 10px;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .trash {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .trash {
   padding-left: 10px;
   border-left: 1px solid #464444;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .trash img {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .trash
+  img {
   width: 100%;
   height: auto;
 }

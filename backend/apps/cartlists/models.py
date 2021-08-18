@@ -15,6 +15,9 @@ class Cartlist(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, db_index=True
     )
+    quantity = models.IntegerField(
+        'Quantity', blank=False, null=False, default=1, db_index=True
+    )
     created_at = models.DateTimeField(
         'Created At', blank=True, auto_now_add=True
     )

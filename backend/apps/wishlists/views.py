@@ -1,11 +1,11 @@
 from rest_framework import generics
 from rest_framework import status
+from rest_framework.response import Response
 from .serializers import WishlistSerializer, WishlistAddSerializer
 from ..users.mixins import CustomLoginRequiredMixin
 from rest_framework.renderers import JSONRenderer
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Wishlist
-
 
 
 class WishList(CustomLoginRequiredMixin, generics.ListAPIView):
@@ -15,9 +15,9 @@ class WishList(CustomLoginRequiredMixin, generics.ListAPIView):
 
     def get(self, request, *args, **kwargs):
         # Filter by login user
-        self.queryset = Wishlist.objects.order_by('-created_at').filter(user=request.login_user)
+        self.queryset = Wishlist.objects.order_by(
+            '-created_at').filter(user=request.login_user)
         return self.list(request, *args, **kwargs)
-
 
 
 class WishlistAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
@@ -28,7 +28,6 @@ class WishlistAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
         # Set the user who login
         request.data['user'] = request.login_user.id
         return self.create(request, *args, **kwargs)
-
 
 
 class WishlistDelete(CustomLoginRequiredMixin, generics.DestroyAPIView):
@@ -43,7 +42,4 @@ class WishlistDelete(CustomLoginRequiredMixin, generics.DestroyAPIView):
             response.accepted_media_type = "application/json"
             response.renderer_context = {}
             return response
-
         return self.destroy(request, *args, **kwargs)
-
-    

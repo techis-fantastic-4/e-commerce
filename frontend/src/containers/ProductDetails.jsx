@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ImgProductCamera from "../assets/img/product-camera.jpg";
 import { useDispatch } from "react-redux";
 import API from "../API";
 

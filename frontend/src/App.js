@@ -6,11 +6,11 @@ import "./assets/style.css"
 
 function App() {
   return (
-    <React.Fragment>
+    <div>
       <Header />
       <Router />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
 

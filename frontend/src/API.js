@@ -103,4 +103,77 @@ export default class API {
             })
         return response
     }
+
+
+    /////////////////////////
+    // Products
+    /////////////////////////
+    getProducts = async (page, category_name) => {
+        let url = "/products/?page=" + page;
+        if (category_name) {
+            url += '&category_name=' + category_name;
+        }
+        const products = await api
+            .get(url)
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return products
+    }
+    getProduct = async (id) => {
+        const product = await api
+            .get("/products/" + id + "/")
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return product
+    }
+    
+    /////////////////////////
+    // Cart
+    /////////////////////////
+
+    /////////////////////////
+    /// Wishlist 
+    ////////////////////////
+    getWishlist = async (token, page) => {
+
+        const wishlist = await api
+            .get("/wishlists/?page"+ page, {               
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return wishlist
+    }
+
+    deleteWishlist = async (token, id) => {
+        const response = await api
+            .delete("/wishlists/delete/" + id + "/", {
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return response
+    }
 }

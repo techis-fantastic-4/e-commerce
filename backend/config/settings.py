@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', '*.herokuapp.com']
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://*.herokuapp.com']
-
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [

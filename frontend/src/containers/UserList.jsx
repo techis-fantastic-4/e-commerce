@@ -29,7 +29,7 @@ const UserList = () => {
   }, [user]);
 
   return (
-    <div class="form">
+    <div className="form">
       <h2>User List</h2>
       <p>This page is just getting the user data to demonstrate how to add auth token to API request.</p>
       {users.length > 0 ? (
@@ -39,8 +39,8 @@ const UserList = () => {
           ))}
         </ul>
       ) : (
-        <div class="loading">
-          <img src={Loading} class="" />
+        <div className="loading">
+          <img src={Loading} className="" />
         </div>
       )}
     </div>

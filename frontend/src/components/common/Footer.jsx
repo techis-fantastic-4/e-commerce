@@ -12,27 +12,24 @@ const Footer = () => {
           <div class="sub-title">Shop and Learn</div>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Categories</a>
-            </li>
-            <li>
-              <a href="">Item Lists</a>
+              <a href="/products">Products</a>
             </li>
             {user.token ? (
               <li>
                 <a href="/signout">Sign Out</a>
               </li>
             ) : (
-              <React.Fragment>
+              <div>
                 <li>
                   <a href="/signin">Sign In</a>
                 </li>
                 <li>
                   <a href="/signup">Sign Up</a>
                 </li>
-              </React.Fragment>
+              </div>
             )}
           </ul>
         </div>

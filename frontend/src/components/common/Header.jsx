@@ -2,10 +2,12 @@ import React from "react";
 import ImageTechShopLogo from "../../assets/img/techshop-logo.svg";
 import ImageIconCart from "../../assets/img/icon-cart.svg";
 import ImageIconSearch from "../../assets/img/icon-search.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../reducks/user/selectors";
+import { push } from "connected-react-router";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const user = getUser(selector);
 
@@ -32,7 +34,10 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/">Categories</a>
+              <a href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="/wishlists">Wishlist</a>
             </li>
             {user.token ? (
               <li class="nav-item">
@@ -50,8 +55,8 @@ const Header = () => {
             )}
           </ul>
         </div>
-        <img src={ImageIconCart} class="icon-cart" />
-        <img src={ImageIconSearch} class="icon-search" />
+        <img src={ImageIconCart} onClick={() => dispatch(push("/cart"))} class="icon-cart" />
+        {/* <img src={ImageIconSearch} class="icon-search" /> */}
       </nav>
     </header>
   );

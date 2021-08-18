@@ -15,10 +15,7 @@ const Footer = () => {
               <a href="">Home</a>
             </li>
             <li>
-              <a href="">Categories</a>
-            </li>
-            <li>
-              <a href="">Item Lists</a>
+              <a href="/products">Products</a>
             </li>
             {user.token ? (
               <li>

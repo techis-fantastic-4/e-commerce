@@ -2,9 +2,9 @@
 # To send the request and get the result, click the 'Send Request' 
 POST http://127.0.0.1:8000/cartlists/add/ HTTP/1.1
 content-type: application/json
-Authorization: 337f257ac0e17397b78c92a9b4dbd07664f3ad84a746d300287d9eae0555
+Authorization: 7a5e538e94e80011661b0d1560a63607fba9d102acb5cba89cdf4445c94a
 
 {
-	"product": 12,
+	"product": 16,
 	"quantity": 2
 }

@@ -16,5 +16,4 @@ export const listCartProducts  = () => {
             alert('Failed to connect API: /cart/')
         })
     }
-
 }

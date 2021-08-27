@@ -2,4 +2,4 @@
 # To send the request and get the result, click the 'Send Request' 
 GET http://127.0.0.1:8000/cartlists/ HTTP/1.1
 content-type: application/json
-Authorization: 337f257ac0e17397b78c92a9b4dbd07664f3ad84a746d300287d9eae0555
+Authorization: fe58d7e46c8f85565a4cce0811255aa1763c41905ee6e2bc4c056bf4d3cd

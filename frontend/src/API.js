@@ -138,6 +138,22 @@ export default class API {
     /////////////////////////
     // Cart
     /////////////////////////
+    getCartlists = async (token, page) => {
+        const cartlists = await api
+            .get("/cartlists/?page="+ page, {               
+                data: {},
+                headers: {
+                    "Authorization": token,
+                }
+            })
+            .then((response) => {
+                return response.data
+            })
+            .catch((error) => {
+                throw new Error(error)
+            })
+        return cartlists
+    }
 
     /////////////////////////
     /// Wishlist 

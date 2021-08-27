@@ -1,12 +1,12 @@
 import * as Actions from './action'
 import initialState from '../store/initialState'
 
-export const CartProductReducers = (state = initialState, action) => {
+export const CartlistsReducers = (state = initialState.cartlists, action) => {
     switch(action.type ) {
-        case Actions.CART_PRODUCT:
+        case Actions.CARTLIST_FETCH:
             return {
-                ...state,
-                ...action.payload
+                list: action.list,
+                subtotal: action.subtotal,
             }
         default:
             return state

@@ -13,6 +13,10 @@ const initialState = {
         email: "",
         token: "",
         token_expires_at: "",
+    },
+    cartlists: {
+        list: [],
+        subtotal: 0,
     }
 };
 

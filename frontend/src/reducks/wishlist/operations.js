@@ -2,7 +2,7 @@ import { push } from "connected-react-router";
 import API from "../../API";
 import {
   fetchWishlistsAction,
-  addwiWshlistAction,
+  addwishlistAction,
   deleteWishlistAction,
 } from "./actions";
 

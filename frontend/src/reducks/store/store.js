@@ -11,6 +11,7 @@ import {PostsReducer} from '../posts/reducers';
 import {UserReducer} from '../user/reducers';
 import {ProductsReducer} from '../products/reducers';
 import {WishlistsReducer} from '../wishlist/reducers';
+import {CartlistsReducers} from '../cartlists/reducers';
 
 export default function createStore(history) {
     return reduxCreateStore(
@@ -19,7 +20,8 @@ export default function createStore(history) {
             wishlists: WishlistsReducer,
             posts: PostsReducer,           
             user: UserReducer,
-            products: ProductsReducer,            
+            products: ProductsReducer, 
+            cartlists: CartlistsReducers,           
         }),
        compose(
         applyMiddleware(
@@ -27,7 +29,7 @@ export default function createStore(history) {
             thunk
         ),
         // DEBUG MODE
-        // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
        )
     )
 }

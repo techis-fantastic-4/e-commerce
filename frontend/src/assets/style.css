@@ -706,9 +706,10 @@ Cart List
 
 .bottom .quantity-trash img {
   width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
+/* need to align product */
 .cart-list .content .product-list .product {
   display: flex;
   margin: 10px 0;
@@ -744,16 +745,35 @@ Cart List
   display: flex;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .quantity {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .quantity {
   padding-right: 10px;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .trash {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .trash {
   padding-left: 10px;
   border-left: 1px solid #464444;
 }
 
-.cart-list .content .product-list .product .product-info .quantity-trash .trash img {
+.cart-list
+  .content
+  .product-list
+  .product
+  .product-info
+  .quantity-trash
+  .trash
+  img {
   width: 100%;
   height: auto;
 }
